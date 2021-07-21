@@ -1,7 +1,7 @@
 {
   "name": "projeto2-2021",
   "version": "1.0.0",
-  "description": "Servidor projeto 2",
+  "description": "servidor projeto 2",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -11,10 +11,11 @@
     "url": "git+https://github.com/Ribas5/Projeto2-2021.git"
   },
   "keywords": [
-    "chatbot",
-    "dialogflow"
+    "projeto",
+    "dialog",
+    "flow"
   ],
-  "author": "Ribamar.martins",
+  "author": "ribamar.martins",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/Ribas5/Projeto2-2021/issues"
@@ -22,5 +23,6 @@
   "homepage": "https://github.com/Ribas5/Projeto2-2021#readme",
   "dependencies": {
     "express": "^4.17.1"
-  }
+  },
+  "devDependencies": {}
 }
