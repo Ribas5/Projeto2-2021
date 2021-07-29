@@ -3,32 +3,60 @@ var select = document.getElementById("selecSemestre").addEventListener('change',
     var disciplinasChecked = document.getElementsByName("disciplinasObrigatorias");
 
     if (parseInt(this.value) == 1) {
-        for (let i = 0; i < 5; i++) {
-            disciplinasChecked[i].checked = true;
+        for (let i = 0; i < disciplinasChecked.length; i++) {
+            if (i < 5) {
+                disciplinasChecked[i].checked = true;
+            } else {
+                disciplinasChecked[i].checked = false;
+            }
         }
     } else if (parseInt(this.value) == 2) {
-        for (let i = 0; i < 10; i++) {
-            disciplinasChecked[i].checked = true;
+        for (let i = 0; i < disciplinasChecked.length; i++) {
+            if (i < 10) {
+                disciplinasChecked[i].checked = true;
+            } else {
+                disciplinasChecked[i].checked = false;
+            }
         }
     } else if (parseInt(this.value) == 3) {
-        for (let i = 0; i < 15; i++) {
-            disciplinasChecked[i].checked = true;
+        for (let i = 0; i < disciplinasChecked.length; i++) {
+            if (i < 15) {
+                disciplinasChecked[i].checked = true;
+            } else {
+                disciplinasChecked[i].checked = false;
+            }
         }
     } else if (parseInt(this.value) == 4) {
-        for (let i = 0; i < 22; i++) {
-            disciplinasChecked[i].checked = true;
+        for (let i = 0; i < disciplinasChecked.length; i++) {
+            if (i < 22) {
+                disciplinasChecked[i].checked = true;
+            } else {
+                disciplinasChecked[i].checked = false;
+            }
         }
     } else if (parseInt(this.value) == 5) {
-        for (let i = 0; i < 26; i++) {
-            disciplinasChecked[i].checked = true;
+        for (let i = 0; i < disciplinasChecked.length; i++) {
+            if (i < 26) {
+                disciplinasChecked[i].checked = true;
+            } else {
+                disciplinasChecked[i].checked = false;
+            }
         }
     } else if (parseInt(this.value) == 6) {
-        for (let i = 0; i < 28; i++) {
-            disciplinasChecked[i].checked = true;
+        for (let i = 0; i < disciplinasChecked.length; i++) {
+            if (i < 28) {
+                disciplinasChecked[i].checked = true;
+            } else {
+                disciplinasChecked[i].checked = false;
+            }
         }
     } else if (parseInt(this.value) == 7) {
-        for (let i = 0; i < 30; i++) {
-            disciplinasChecked[i].checked = true;
+        for (let i = 0; i < disciplinasChecked.length; i++) {
+            if (i < 30) {
+                disciplinasChecked[i].checked = true;
+            } else {
+                disciplinasChecked[i].checked = false;
+            }
         }
     } else if (parseInt(this.value) >= 8) {
         for (let i = 0; i < disciplinasChecked.length; i++) {
