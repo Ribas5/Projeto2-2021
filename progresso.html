@@ -26,21 +26,13 @@
     <div id="wrapper">
 
         <!-- Sidebar -->
-        <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
-
-            <!-- Sidebar - Brand -->
-            <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
-                <div class="sidebar-brand-icon rotate-n-15">
-                    <i class="fas fa-laugh-wink"></i>
-                </div>
-                <div class="sidebar-brand-text mx-3">Projeto Integrado 2</div>
-            </a>
+        <ul class="navbar-nav bg-gradient-primary sidebar toggled sidebar-dark accordion align-items-center justify-content-center" id="accordionSidebar">
 
             <!-- Divider -->
             <hr class="sidebar-divider my-0">
 
             <!-- Nav Item - Dashboard -->
-            <li class="nav-item active">
+            <li class="nav-item">
                 <a class="nav-link" href="progresso.html">
                     <i class="fas fa-fw fa-tachometer-alt"></i>
                     <span>Progresso</span></a>
@@ -48,41 +40,19 @@
 
             <!-- Nav Item - Pages Collapse Menu -->
             <li class="nav-item">
-                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
+                <a class="nav-link" href="#">
                     <i class="fas fa-fw fa-bullhorn"></i>
                     <span>Trilhas</span>
                 </a>
-                <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
-                    <div class="bg-white py-2 collapse-inner rounded">
-                        <!-- <h6 class="collapse-header">Custom Components:</h6> -->
-                        <a class="collapse-item" href="buttons.html">Caminhos</a>
-                        <a class="collapse-item" href="cards.html">Faça sua trilha</a>
-                    </div>
-                </div>
             </li>
 
             <!-- Nav Item - Utilities Collapse Menu -->
             <li class="nav-item">
-                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseUtilities" aria-expanded="true" aria-controls="collapseUtilities">
+                <a class="nav-link" href="complementar.html">
                     <i class="fas fa-fw fa-tasks"></i>
                     <span>Atividades complementares</span>
                 </a>
-                <div id="collapseUtilities" class="collapse" aria-labelledby="headingUtilities" data-parent="#accordionSidebar">
-                    <div class="bg-white py-2 collapse-inner rounded">
-                        <!-- <h6 class="collapse-header">Escolha o que quer fazer</h6> -->
-                        <a class="collapse-item" href="utilities-color.html">O que é</a>
-                        <a class="collapse-item" href="utilities-border.html">Simulação</a>
-                    </div>
-                </div>
             </li>
-
-            <!-- Divider -->
-            <hr class="sidebar-divider d-none d-md-block">
-
-            <!-- Sidebar Toggler (Sidebar) -->
-            <div class="text-center d-none d-md-inline">
-                <button class="rounded-circle border-0" id="sidebarToggle"></button>
-            </div>
 
         </ul>
         <!-- End of Sidebar -->
@@ -94,10 +64,10 @@
             <div id="content">
 
                 <!-- Topbar -->
-                <nav class="navbar navbar-expand navbar-light topbar mb-4 static-top shadow">
+                <nav class="navbar navbar-expand navbar-light">
                     <!-- Sidebar Toggle (Topbar) -->
                     <button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3">
-                        <i class="fa fa-bars"></i>
+                        <i class="fa fa-ellipsis-v"></i>
                     </button>
                 </nav>
                 <!-- End of Topbar -->
@@ -119,40 +89,429 @@
 
                 <!-- Formulário -->
                 <div class="margem" id="formulario" style="display: none;">
-                    <h1>Disciplinas obrigatórias que você já cursou. Desmarque caso não tenha cursado ainda.</h1>
+                    <h1>Disciplinas obrigatórias e eletivas que você já cursou. Desmarque caso não tenha cursado ainda.</h1>
 
-                    <!--<form id="formSelect">
-                         <h4>1º Semestre</h4>
-                        <div>
-                            <input type="checkbox" id="" name="">
-                            <label> SMD0094 - Introdução a Sistemas e Mídias Digitais</label>
-                        </div>
-                        <div>
-                            <input type="checkbox" id="" name="">
-                            <label> SMD0088 - Autoração Multimídia I</label>
-                        </div>
-                        <div>
-                            <input type="checkbox" id="" name="">
-                            <label> SMD0089 - Desenho I</label>
-                        </div>
-                        <div>
-                            <input type="checkbox" id="" name="">
-                            <label> SMD0091 - História do Design</label>
-                        </div>
-                        <div>
-                            <input type="checkbox" id="" name="">
-                            <label> SMD0095 - Programação I</label>
-                        </div><br>
+                    <form id="formSelect">
 
-                        
+                        <div class="accordion" id="accordionExample">
 
-                         
-                    </form>-->
-                    <form id="formSelect"></form>
+                            <div class="card">
+                                <div class="card-header" id="headingOne">
+                                    <h2 class="mb-0">
+                                        <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                        1o semestre
+                                      </button>
+                                    </h2>
+                                </div>
+
+                                <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
+                                    <div class="card-body">
+                                        <div>
+                                            <input type="checkbox" name="disciplinasObrigatorias">
+                                            <label> SMD0094 - Introdução a Sistemas e Mídias Digitais</label>
+                                        </div>
+                                        <div>
+                                            <input type="checkbox" name="disciplinasObrigatorias">
+                                            <label> SMD0088 - Autoração Multimídia I</label>
+                                        </div>
+                                        <div>
+                                            <input type="checkbox" name="disciplinasObrigatorias">
+                                            <label> SMD0089 - Desenho I</label>
+                                        </div>
+                                        <div>
+                                            <input type="checkbox" name="disciplinasObrigatorias">
+                                            <label> SMD0091 - História do Design</label>
+                                        </div>
+                                        <div>
+                                            <input type="checkbox" name="disciplinasObrigatorias">
+                                            <label> SMD0095 - Programação I</label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+
+
+                            <div class="card">
+                                <div class="card-header" id="headingTwo">
+                                    <h2 class="mb-0">
+                                        <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
+                                        2o semestre
+                                      </button>
+                                    </h2>
+                                </div>
+                                <div id="collapseTwo" class="collapse show" aria-labelledby="headingTwo" data-parent="#accordionExample">
+                                    <div class="card-body">
+                                        <div>
+                                            <input type="checkbox" name="disciplinasObrigatorias">
+                                            <label> SMD0107 - Cognição e Tecnologias Digitais</label>
+                                        </div>
+                                        <div>
+                                            <input type="checkbox" name="disciplinasObrigatorias">
+                                            <label> SMD0093 - Narrativas Multimídia</label>
+                                        </div>
+                                        <div>
+                                            <input type="checkbox" name="disciplinasObrigatorias">
+                                            <label> SMD0095 - Programação II</label>
+                                        </div>
+                                        <div>
+                                            <input type="checkbox" name="disciplinasObrigatorias">
+                                            <label> SMD0105 - Comunicação Visual I</label>
+                                        </div>
+                                        <div>
+                                            <input type="checkbox" name="disciplinasObrigatorias">
+                                            <label> SMD0106 - Mamtemática Aplicada à Multimídia I</label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+
+
+                            <div class="card">
+                                <div class="card-header" id="headingThree">
+                                    <h2 class="mb-0">
+                                        <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="true" aria-controls="collapseThree">
+                                        3o semestre
+                                      </button>
+                                    </h2>
+                                </div>
+                                <div id="collapseThree" class="collapse show" aria-labelledby="headingThree" data-parent="#accordionExample">
+                                    <div class="card-body">
+                                        <div>
+                                            <input type="checkbox" name="disciplinasObrigatorias">
+                                            <label> SMD0092 - Projeto Integrado I</label>
+                                        </div>
+                                        <div>
+                                            <input type="checkbox" name="disciplinasObrigatorias">
+                                            <label> SMD0015 - Design de Interfaces Gráficas</label>
+                                        </div>
+                                        <div>
+                                            <input type="checkbox" name="disciplinasObrigatorias">
+                                            <label> SMD0088 - Autoração Multimídia II</label>
+                                        </div>
+                                        <div>
+                                            <input type="checkbox" name="disciplinasObrigatorias">
+                                            <label> SMD0108 - Interação Humano-Computador I</label>
+                                        </div>
+                                        <div>
+                                            <input type="checkbox" name="disciplinasObrigatorias">
+                                            <label> SMD0109 - Introdução à Cibercultura</label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+
+
+                            <div class="card">
+                                <div class="card-header" id="headingFour">
+                                    <h2 class="mb-0">
+                                        <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseFour" aria-expanded="true" aria-controls="collapseFour">
+                                        4o semestre
+                                      </button>
+                                    </h2>
+                                </div>
+
+                                <div id="collapseFour" class="collapse show" aria-labelledby="headingFour" data-parent="#accordionExample">
+                                    <div class="card-body">
+                                        <div>
+                                            <input type="checkbox" name="disciplinasObrigatorias">
+                                            <label> SMD0102 - Metodologia de Pesquisa Científica</label>
+                                        </div>
+                                        <div>
+                                            <input type="checkbox" name="disciplinasObrigatorias">
+                                            <label> SMD0030	- Análise e Projeto de Sistemas</label>
+                                        </div>
+                                        <div>
+                                            <input type="checkbox" name="disciplinasObrigatorias">
+                                            <label> SMD0033 - Estrutura de Dados</label>
+                                        </div>
+                                        <div>
+                                            <input type="checkbox" name="disciplinasObrigatorias">
+                                            <label> SMD0037 - Redes de Compútadores</label>
+                                        </div>
+                                        <div>
+                                            <input type="checkbox" name="disciplinasObrigatorias">
+                                            <label> SMD0086 - Fotografia Digital</label>
+                                        </div>
+                                        <div>
+                                            <input type="checkbox" name="disciplinasObrigatorias">
+                                            <label> SMD0090 - Semiótica Aplicada</label>
+                                        </div>
+                                        <div>
+                                            <input type="checkbox" name="disciplinasObrigatorias">
+                                            <label> SMD0098 - Desenho II</label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+
+
+
+                            <div class="card">
+                                <div class="card-header" id="headingFive">
+                                    <h2 class="mb-0">
+                                        <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseFive" aria-expanded="true" aria-controls="collapseFive">
+                                        5o semestre
+                                      </button>
+                                    </h2>
+                                </div>
+
+                                <div id="collapseFive" class="collapse show" aria-labelledby="headingFive" data-parent="#accordionExample">
+                                    <div class="card-body">
+                                        <div>
+                                            <input type="checkbox" name="disciplinasObrigatorias">
+                                            <label> SMD0032 - Design de Som</label>
+                                        </div>
+                                        <div>
+                                            <input type="checkbox" name="disciplinasObrigatorias">
+                                            <label> SMD0055 - Engenharia de Software</label>
+                                        </div>
+                                        <div>
+                                            <input type="checkbox" name="disciplinasObrigatorias">
+                                            <label> SMD0099 - Banco de Dados I</label>
+                                        </div>
+                                        <div>
+                                            <input type="checkbox" name="disciplinasObrigatorias">
+                                            <label> SMD0110 - Comunicação Visual II</label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+
+
+                            <div class="card">
+                                <div class="card-header" id="headingSix">
+                                    <h2 class="mb-0">
+                                        <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseSix" aria-expanded="true" aria-controls="collapseSix">
+                                        6o semestre
+                                      </button>
+                                    </h2>
+                                </div>
+
+                                <div id="collapseSix" class="collapse show" aria-labelledby="headingSix" data-parent="#accordionExample">
+                                    <div class="card-body">
+                                        <div>
+                                            <input type="checkbox" name="disciplinasObrigatorias">
+                                            <label> SMD0025 - Ética e Política Autoral</label>
+                                        </div>
+                                        <div>
+                                            <input type="checkbox" name="disciplinasObrigatorias">
+                                            <label> SMD0100 - Gestão de Projetos Multimídia</label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+
+
+
+                            <div class="card">
+                                <div class="card-header" id="headingSeven">
+                                    <h2 class="mb-0">
+                                        <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseSeven" aria-expanded="true" aria-controls="collapseSeven">
+                                        7o semestre
+                                      </button>
+                                    </h2>
+                                </div>
+
+                                <div id="collapseSeven" class="collapse show" aria-labelledby="headingSeven" data-parent="#accordionExample">
+                                    <div class="card-body">
+                                        <div>
+                                            <input type="checkbox" name="disciplinasObrigatorias">
+                                            <label> SMD0101 - Projeto Integrado II</label>
+                                        </div>
+                                        <div>
+                                            <input type="checkbox" name="disciplinasObrigatorias">
+                                            <label> SMD0111 - Projeto de Trabalho Final</label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+
+
+                            <div class="card">
+                                <div class="card-header" id="headingEight">
+                                    <h2 class="mb-0">
+                                        <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseEight" aria-expanded="true" aria-controls="collapseEight">
+                                        8o semestre
+                                      </button>
+                                    </h2>
+                                </div>
+
+                                <div id="collapseEight" class="collapse show" aria-labelledby="headingEight" data-parent="#accordionExample">
+                                    <div class="card-body">
+                                        <div>
+                                            <input type="checkbox" name="disciplinasObrigatorias">
+                                            <label> SMD0077 - Trabalho de Conclusão de Curso</label>
+                                        </div>
+                                        <div>
+                                            <input type="checkbox" name="disciplinasObrigatorias">
+                                            <label> SMD0103 - Seminários em Multimídia</label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <br>
+                        <h1>Marque as disciplinas optativias que já cursou.</h1><br>
+                        <div class="accordion" id="accordionExample2">
+
+                            <div class="card">
+                                <div class="card-header" id="headingOne2">
+                                    <h2 class="mb-0">
+                                        <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseOne2" aria-expanded="false" aria-controls="collapseOne2">
+                                        Programação
+                                      </button>
+                                    </h2>
+                                </div>
+
+                                <div id="collapseOne2" class="collapse" aria-labelledby="headingOne2" data-parent="#accordionExample2">
+                                    <div class="card-body">
+                                        <div>
+                                            <input type="checkbox" name="disciplinasOptativas">
+                                            <label> SMD0017 - Programação Orientada a Objetos</label>
+                                        </div>
+                                        <div>
+                                            <input type="checkbox" name="disciplinasOptativas">
+                                            <label> SMD0020 - Prototipação de Jogos Tridimensionais</label>
+                                        </div>
+                                        <div>
+                                            <input type="checkbox" name="disciplinasOptativas">
+                                            <label> SMD0089 - Desenho I</label>
+                                        </div>
+                                        <div>
+                                            <input type="checkbox" name="disciplinasOptativas">
+                                            <label> SMD0091 - História do Design</label>
+                                        </div>
+                                        <div>
+                                            <input type="checkbox" name="disciplinasOptativas">
+                                            <label> SMD0095 - Programação I</label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+
+
+
+                            <div class="card">
+                                <div class="card-header" id="headingTwo2">
+                                    <h2 class="mb-0">
+                                        <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo2" aria-expanded="false" aria-controls="collapseTwo2">
+                                        Design
+                                      </button>
+                                    </h2>
+                                </div>
+                                <div id="collapseTwo2" class="collapse" aria-labelledby="headingTwo2" data-parent="#accordionExample2">
+                                    <div class="card-body">
+                                        <div>
+                                            <input type="checkbox" name="disciplinasOptativas">
+                                            <label> SMD0107 - Cognição e Tecnologias Digitais</label>
+                                        </div>
+                                        <div>
+                                            <input type="checkbox" name="disciplinasOptativas">
+                                            <label> SMD0093 - Narrativas Multimídia</label>
+                                        </div>
+                                        <div>
+                                            <input type="checkbox" name="disciplinasOptativas">
+                                            <label> SMD0095 - Programação II</label>
+                                        </div>
+                                        <div>
+                                            <input type="checkbox" name="disciplinasOptativas">
+                                            <label> SMD0105 - Comunicação Visual I</label>
+                                        </div>
+                                        <div>
+                                            <input type="checkbox" name="disciplinasOptativas">
+                                            <label> SMD0106 - Mamtemática Aplicada à Multimídia I</label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+
+
+                            <div class="card">
+                                <div class="card-header" id="headingThree2">
+                                    <h2 class="mb-0">
+                                        <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseThree2" aria-expanded="false" aria-controls="collapseThree2">
+                                        Audiovisual
+                                      </button>
+                                    </h2>
+                                </div>
+                                <div id="collapseThree2" class="collapse" aria-labelledby="headingThree2" data-parent="#accordionExample2">
+                                    <div class="card-body">
+                                        <div>
+                                            <input type="checkbox" name="disciplinasOptativas">
+                                            <label> SMD0107 - Cognição e Tecnologias Digitais</label>
+                                        </div>
+                                        <div>
+                                            <input type="checkbox" name="disciplinasOptativas">
+                                            <label> SMD0093 - Narrativas Multimídia</label>
+                                        </div>
+                                        <div>
+                                            <input type="checkbox" name="disciplinasOptativas">
+                                            <label> SMD0095 - Programação II</label>
+                                        </div>
+                                        <div>
+                                            <input type="checkbox" name="disciplinasOptativas">
+                                            <label> SMD0105 - Comunicação Visual I</label>
+                                        </div>
+                                        <div>
+                                            <input type="checkbox" name="disciplinasOptativas">
+                                            <label> SMD0106 - Mamtemática Aplicada à Multimídia I</label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+
+
+                            <div class="card">
+                                <div class="card-header" id="headingFour2">
+                                    <h2 class="mb-0">
+                                        <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseFour2" aria-expanded="false" aria-controls="collapseFour2">
+                                        Outros
+                                      </button>
+                                    </h2>
+                                </div>
+                                <div id="collapseFour2" class="collapse" aria-labelledby="headingFour2" data-parent="#accordionExample2">
+                                    <div class="card-body">
+                                        <div>
+                                            <input type="checkbox" name="disciplinasOptativas">
+                                            <label> SMD0107 - Cognição e Tecnologias Digitais</label>
+                                        </div>
+                                        <div>
+                                            <input type="checkbox" name="disciplinasOptativas">
+                                            <label> SMD0093 - Narrativas Multimídia</label>
+                                        </div>
+                                        <div>
+                                            <input type="checkbox" name="disciplinasOptativas">
+                                            <label> SMD0095 - Programação II</label>
+                                        </div>
+                                        <div>
+                                            <input type="checkbox" name="disciplinasOptativas">
+                                            <label> SMD0105 - Comunicação Visual I</label>
+                                        </div>
+                                        <div>
+                                            <input type="checkbox" name="disciplinasOptativas">
+                                            <label> SMD0106 - Mamtemática Aplicada à Multimídia I</label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </form><br>
+
                     <a type="button" class="btn btn-primary" id="btnProgresso" value="Checar progresso">Cheque seu progresso</a>
                 </div>
-
-
 
                 <!-- Begin Page Content -->
                 <div class="container-fluid" id="relatorio" style="display: none;">
@@ -322,10 +681,6 @@
                         </div>
                     </div>
                 </div>
-
-
-
-
             </div>
         </div>
 
