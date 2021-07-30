@@ -1,28 +1,28 @@
 {
-  "name": "projeto2-2021",
-  "version": "1.0.0",
-  "description": "servidor projeto 2",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/Ribas5/Projeto2-2021.git"
-  },
-  "keywords": [
-    "projeto",
-    "dialog",
-    "flow"
-  ],
-  "author": "ribamar.martins",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/Ribas5/Projeto2-2021/issues"
-  },
-  "homepage": "https://github.com/Ribas5/Projeto2-2021#readme",
-  "dependencies": {
-    "express": "^4.17.1"
-  },
-  "devDependencies": {}
+    "name": "projeto2-2021",
+    "version": "1.0.0",
+    "description": "servidor projeto 2",
+    "main": "index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "server": "npm index.js"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/Ribas5/Projeto2-2021.git"
+    },
+    "keywords": [
+        "projeto",
+        "dialog",
+        "flow"
+    ],
+    "author": "ribamar.martins",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/Ribas5/Projeto2-2021/issues"
+    },
+    "homepage": "https://github.com/Ribas5/Projeto2-2021#readme",
+    "dependencies": {
+        "express": "^4.17.1"
+    }
 }
