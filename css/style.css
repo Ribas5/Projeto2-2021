@@ -1,3 +1,8 @@
+@font-face {
+    font-family: 'Inter';
+    src: url('font/Inter-VariableFont.ttf');
+}
+
 .margem {
     margin: 20px;
 }
@@ -14,22 +19,4 @@ df-messenger {
     --df-messenger-input-placeholder-font-color: #FFFFFF99;
     --df-messenger-input-font-color: #ffffff;
     scrollbar-color: #836EBC80;
-    
 }
-df-messenger::-webkit-scrollbar-track {
-    box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
-  }
-
-/*
-df-messenger-bot-message	                            Cor de segundo plano do balão para mensagens do agente.
-df-messenger-button-titlebar-color	                    Cor do botão flutuante e da barra de título da caixa de diálogo do chat.
-df-messenger-button-titlebar-font-color	                Cor da fonte do título na barra de título.
-df-messenger-chat-background-color	                    Cor do segundo plano da caixa de diálogo de chat.
-df-messenger-font-color	                                Cor da fonte para mensagens.
-df-messenger-input-box-color	                        Cor do segundo plano da caixa de entrada de texto.
-df-messenger-input-font-color	                        Cor da fonte da caixa de entrada de texto.
-df-messenger-input-placeholder-font-color	            Cor da fonte do texto do marcador na caixa de entrada de texto.
-df-messenger-minimized-chat-close-icon-color	        Cor do ícone de fechamento na visualização de chat fechada.
-df-messenger-send-icon	                                Cor do ícone de envio na caixa de entrada de texto.
-df-messenger-user-message	                            Cor do segundo plano do balão para mensagens do usuário.
-*/
