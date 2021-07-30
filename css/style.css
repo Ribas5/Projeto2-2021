@@ -3,14 +3,22 @@
 }
 
 df-messenger {
-    --df-messenger-bot-message: #878fac;
-    --df-messenger-button-titlebar-color: #df9b56;
-    --df-messenger-chat-background-color: #fafafa;
-    --df-messenger-font-color: white;
+    --df-messenger-bot-message: #D7D5DE;
+    --df-messenger-minimized-chat-close-icon-color: #F6BD2887;
+    --df-messenger-button-titlebar-color: #231b36;
+    --df-messenger-chat-background-color: #382C58;
+    --df-messenger-input-box-color: #9E96B9;
+    --df-messenger-font-color: #343434;
     --df-messenger-send-icon: #878fac;
-    --df-messenger-user-message: #479b3d;
+    --df-messenger-user-message: #F3EACF;
+    --df-messenger-input-placeholder-font-color: #FFFFFF99;
+    --df-messenger-input-font-color: #ffffff;
+    scrollbar-color: #836EBC80;
+    
 }
-
+df-messenger::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  }
 
 /*
 df-messenger-bot-message	                            Cor de segundo plano do balão para mensagens do agente.
