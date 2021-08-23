@@ -25,28 +25,28 @@
     <div id="wrapper">
 
         <!-- Sidebar -->
-        <ul class="navbar-nav bg-gradient-primary sidebar toggled sidebar-dark accordion justify-content-center" id="accordionSidebar">
+        <ul class="navbar-nav cor-menu sidebar toggled accordion align-items-center justify-content-center" id="accordionSidebar">
 
             <!-- Nav Item - Dashboard -->
             <li class="nav-item">
-                <a class="nav-link" href="progresso.html">
+                <a class="nav-link cor-font-menu" href="progresso.html">
                     <i class="fas fa-fw fa-tachometer-alt"></i>
                     <span>Progresso</span></a>
             </li>
 
-            <!-- Nav Item - Pages Collapse Menu -->
+            <!-- Nav Item - Utilities Collapse Menu -->
             <li class="nav-item">
-                <a class="nav-link" href="#">
-                    <i class="fas fa-fw fa-bullhorn"></i>
-                    <span>Trilhas</span>
+                <a class="nav-link cor-font-menu" href="complementar.html">
+                    <i class="fas fa-fw fa-tasks"></i>
+                    <span>Horas</span>
                 </a>
             </li>
 
-            <!-- Nav Item - Utilities Collapse Menu -->
+            <!-- Nav Item - Pages Collapse Menu -->
             <li class="nav-item">
-                <a class="nav-link" href="complementar.html">
-                    <i class="fas fa-fw fa-tasks"></i>
-                    <span>Atividades complementares</span>
+                <a class="nav-link cor-font-menu" href="#">
+                    <i class="fas fa-fw fa-bullhorn"></i>
+                    <span>Trilhas</span>
                 </a>
             </li>
 
@@ -54,7 +54,7 @@
         <!-- End of Sidebar -->
 
         <!-- Content Wrapper -->
-        <div id="content-wrapper" class="d-flex flex-column">
+        <div class="d-flex flex-column content-wrapper">
 
             <!-- Main Content -->
             <div id="content">
@@ -71,6 +71,7 @@
                 <div class="margem" id="semestre">
                     <label for="semestre">Selecione o seu semestre:</label>
                     <select name="semestre" id="selecSemestre">
+                        <option hidden>Semestre</option>
                         <option value="1">1º semestre</option>
                         <option value="2">2º semestre</option>
                         <option value="3">3º semestre</option>
@@ -959,10 +960,7 @@
     <!-- Page level plugins -->
     <script src="vendor/chart.js/Chart.min.js"></script>
 
-    <!-- Page level custom scripts -->
-    <script src="js/demo/chart-area-demo.js"></script>
-    <script src="js/demo/chart-pie-demo.js"></script>
-
     <script src="js/script.js"></script>
+    <script src="js/graficos.js"></script>
 
 </body>

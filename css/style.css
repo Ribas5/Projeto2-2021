@@ -3,8 +3,13 @@
     src: url('font/Inter-VariableFont.ttf');
 }
 
-.margem {
-    margin: 20px;
+body {
+    color: #FFF;
+    background-color: #30324B;
+}
+
+a.cor-font-menu {
+    color: rgb(255, 255, 255);
 }
 
 df-messenger {
@@ -20,19 +25,24 @@ df-messenger {
     --df-messenger-input-font-color: #ffffff;
     scrollbar-color: #836EBC80;
 }
-body{
+
+.margem {
+    margin: 20px;
     background-color: #30324B;
 }
 
-.cor-butao{
-    color: #fff;
+.cor-butao {
+    color: #FFF;
     background-color: #5D91DE;
-    border-radius:50px;
+    border-radius: 50px;
 }
-.cor-menu{
+
+.cor-menu {
     background-color: rgba(38, 28, 68, 0.5);
     background-size: cover;
 }
-a.cor-font-menu{
-    color: rgb(255, 255, 255);
+
+.content-wrapper {
+    width: 100%;
+    overflow-x: hidden;
 }

@@ -16,7 +16,7 @@
     <!-- CSS -->
     <link href="css/sb-admin-2.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
-    
+
 
 </head>
 
@@ -35,6 +35,14 @@
                     <span>Progresso</span></a>
             </li>
 
+            <!-- Nav Item - Utilities Collapse Menu -->
+            <li class="nav-item">
+                <a class="nav-link cor-font-menu" href="complementar.html">
+                    <i class="fas fa-fw fa-tasks"></i>
+                    <span>Horas</span>
+                </a>
+            </li>
+
             <!-- Nav Item - Pages Collapse Menu -->
             <li class="nav-item">
                 <a class="nav-link cor-font-menu" href="#">
@@ -43,19 +51,11 @@
                 </a>
             </li>
 
-            <!-- Nav Item - Utilities Collapse Menu -->
-            <li class="nav-item">
-                <a class="nav-link cor-font-menu" href="complementar.html">
-                    <i class="fas fa-fw fa-tasks"></i>
-                    <span>Atividades complementares</span>
-                </a>
-            </li>
-
         </ul>
         <!-- End of Sidebar -->
 
         <!-- Content Wrapper -->
-        <div id="content-wrapper" class="d-flex flex-column">
+        <div class="d-flex flex-column content-wrapper">
 
             <!-- Main Content -->
             <div id="content">
@@ -74,8 +74,8 @@
                 <h4>Possui três funcionalidades: ver seu progresso, verificar as trilhas e entender sobre as atividades/horas complementares.</h4>
                 <div>
                     <a class="btn cor-butao" href="progresso.html" role="button">Progresso</a>
-                    <a class="btn cor-butao" href="#" role="button">Trilhas</a>
                     <a class="btn cor-butao" href="complementar.html" role="button">Atividades Complementares</a>
+                    <a class="btn cor-butao" href="#" role="button" onclick="teste()">Trilhas</a>
                 </div>
             </div>
         </div>
@@ -97,10 +97,6 @@
 
     <!-- Page level plugins -->
     <script src="vendor/chart.js/Chart.min.js "></script>
-
-    <!-- Page level custom scripts -->
-    <script src="js/demo/chart-area-demo.js "></script>
-    <script src="js/demo/chart-pie-demo.js "></script>
 
     <script src="js/script.js "></script>
 

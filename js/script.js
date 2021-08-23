@@ -75,8 +75,8 @@ document.getElementById("btnProgresso").addEventListener('click', function() {
         }
     }
     var horas = (contDiscp * 64 + 64 + 192) + " horas";
-    var prog = parseInt(((contDiscp * 64) / 2880) * 100);
-    var disc = (2880 - contDiscp * 64) / 64;
+    var prog = parseInt(((contDiscp * 64 + 64 + 192) / 2880) * 100);
+    var disc = (2880 - contDiscp * 64 - 64 - 192) / 64;
     document.getElementById("semestre").style.display = "none";
     document.getElementById("formulario").style.display = "none";
     document.getElementById("relatorio").style.display = "block";
@@ -86,3 +86,13 @@ document.getElementById("btnProgresso").addEventListener('click', function() {
     document.getElementById("porcBarra").style.width = prog + "%";
     document.getElementById("discProgresso").innerHTML = disc;
 });
+
+
+function teste() {
+    let json = {
+            discAprovadas: 30,
+            discPorSemestre: [5, 5, 5, 5, 5, 5, 5, 5]
+        }
+        //let dados = JSON.parse(json)
+    console.log(json.discAprovadas + "\n" + json.discPorSemestre)
+}
