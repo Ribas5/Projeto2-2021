@@ -5,7 +5,26 @@
 
 body {
     color: #FFF;
-    background-color: #30324B;
+}
+
+body.inicial {
+    background-image: url('./../img/background-inicial.svg');
+    background-size: cover;
+}
+
+body.escolha {
+    background-image: url('./../img/');
+    background-size: cover;
+}
+
+body.formProgreso {
+    background-image: url('./../img/');
+    background-size: cover;
+}
+
+.progresso {
+    background-image: url('./../img/');
+    background-size: cover;
 }
 
 a.cor-font-menu {
@@ -26,15 +45,52 @@ df-messenger {
     scrollbar-color: #836EBC80;
 }
 
+.flex {
+    display: flex;
+}
+
 .margem {
     margin: 20px;
     background-color: #30324B;
 }
 
 .cor-butao {
-    color: #FFF;
+    color: inherit;
     background-color: #5D91DE;
     border-radius: 50px;
+}
+
+.botao-escolha {
+    display: flex;
+    flex-direction: column;
+    width: 350px;
+    height: 350px;
+    text-align: center;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    padding: 30px;
+    font-size: 32px;
+    line-height: 1.5;
+    border-radius: 0.35rem;
+}
+
+.botao-escolha:hover {
+    cursor: pointer;
+    color: #FFF;
+    text-decoration: none;
+}
+
+.cor-botao-escolha {
+    color: #FFF;
+    background-color: #25273E;
+    border-radius: 20px;
+}
+
+.margem-botao {
+    margin-left: 30px;
+    margin-right: 30px;
 }
 
 .cor-menu {

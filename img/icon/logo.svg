@@ -1,0 +1,13 @@
+<svg width="48" height="49" viewBox="0 0 48 49" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M0 24C0 10.7452 10.7452 0 24 0C37.2548 0 48 10.7452 48 24V25C48 38.2548 37.2548 49 24 49C10.7452 49 0 38.2548 0 25V24Z" fill="#1B1430"/>
+<path d="M0 24C0 10.7452 10.7452 0 24 0C37.2548 0 48 10.7452 48 24V25C48 38.2548 37.2548 49 24 49C10.7452 49 0 38.2548 0 25V24Z" fill="#F8E295"/>
+<path d="M0 24C0 10.7452 10.7452 0 24 0C37.2548 0 48 10.7452 48 24V25C48 38.2548 37.2548 49 24 49C10.7452 49 0 38.2548 0 25V24Z" fill="#F7BD28" fill-opacity="0.53" style="mix-blend-mode:multiply"/>
+<path d="M0 24C0 10.7452 10.7452 0 24 0C37.2548 0 48 10.7452 48 24V25C48 38.2548 37.2548 49 24 49C10.7452 49 0 38.2548 0 25V24Z" fill="url(#paint0_radial)" style="mix-blend-mode:screen"/>
+<path d="M19 20.5973L19.0244 20.1369C19.1227 18.2774 20.1466 16.591 21.751 15.646L21.8119 15.6101C23.5008 14.6153 25.5946 14.6077 27.2908 15.5901V15.5901C28.9676 16.5613 30 18.3524 30 20.2902V20.7852C30 22.5048 29.2959 24.1495 28.0517 25.3366L27.2727 26.0796C25.531 27.7412 24.5455 30.0435 24.5455 32.4507V35" stroke="white" stroke-width="3" stroke-linecap="round"/>
+<defs>
+<radialGradient id="paint0_radial" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(24.0683 19.5397) rotate(90) scale(25.9558 35.3263)">
+<stop stop-color="#B59730"/>
+<stop offset="1" stop-color="#B15743" stop-opacity="0"/>
+</radialGradient>
+</defs>
+</svg>
