@@ -87,12 +87,38 @@ document.getElementById("btnProgresso").addEventListener('click', function() {
     document.getElementById("discProgresso").innerHTML = disc;
 });
 
+function progressoPDF() {
+    // Convertendo o JSON para objeto
+    let json = '{ "discAprovadas": 10, "discPorSemestre": [5, 5] }'
+    let dados = JSON.parse(json)
 
-function teste() {
-    let json = {
-            discAprovadas: 30,
-            discPorSemestre: [5, 5, 5, 5, 5, 5, 5, 5]
+    sessionStorage.setItem("discPorSemestreAtual", dados.discPorSemestre)
+
+    var discRestantes = 40 - dados.discAprovadas
+    console.log(discRestantes);
+
+    // Verifica se os semestres que faltam são menor que 8
+    var semestresRestante = dados.discPorSemestre.length
+    if (dados.discPorSemestre.length < 8) {
+        semestresRestante = 8 - dados.discPorSemestre.length
+
+        // Disciplinas que precisam ser feitas por semestre para se formar no tempo
+        var discPorSemestreRestante = discRestantes / semestresRestante
+
+        // Adicionando na lista
+        for (let i = 0; i < semestresRestante; i++) {
+            dados.discPorSemestre.push(discPorSemestreRestante)
         }
-        //let dados = JSON.parse(json)
-    console.log(json.discAprovadas + "\n" + json.discPorSemestre)
+    }
+
+    sessionStorage.setItem("discPorSemestre", dados.discPorSemestre)
+
+    var prog = parseInt(((dados.discAprovadas * 64 + 64 + 192) / 2880) * 100);
+
+    document.getElementById("discConluidas").innerHTML = dados.discAprovadas;
+
+    document.getElementById("porcProgresso").innerHTML = prog + "%";
+    document.getElementById("porcBarra").style.width = prog + "%";
+
+    document.getElementById("discRestantes").innerHTML = discRestantes;
 }

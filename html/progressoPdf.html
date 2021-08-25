@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>SMDúvidas</title>
+
+    <!-- Fontes -->
+    <link href="./../vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+
+    <!-- CSS -->
+    <link href="./../css/sb-admin-2.css" rel="stylesheet">
+    <link rel="stylesheet" href="./../css/style.css">
+
+</head>
+
+<body id="page-top" class="inicial" onload="progressoPDF()">
+
+    <!-- Page Wrapper -->
+    <div id="wrapper">
+
+        <!-- Sidebar -->
+        <ul class="navbar-nav cor-menu sidebar toggled accordion align-items-center justify-content-center" id="accordionSidebar">
+
+            <li class="nav-item">
+                <a class="nav-link" href="./../index.html">
+                    <img src="./../img/icon/logo.svg" alt="">
+                </a>
+            </li>
+
+            <!-- Nav Item - Dashboard -->
+            <li class="nav-item">
+                <a class="nav-link cor-font-menu" href="progresso.html">
+                    <img src="./../img/icon/icone-progresso.svg" alt=""> Progresso
+                </a>
+            </li>
+
+            <!-- Nav Item - Utilities Collapse Menu -->
+            <li class="nav-item">
+                <a class="nav-link cor-font-menu" href="complementar.html">
+                    <img src="./../img/icon/icone-horas.svg" alt=""> Horas
+                </a>
+            </li>
+
+            <!-- Nav Item - Pages Collapse Menu -->
+            <li class="nav-item">
+                <a class="nav-link cor-font-menu" href="#">
+                    <img src="./../img/icon/icone-trilhas.svg"> Trilhas
+                </a>
+            </li>
+
+        </ul>
+        <!-- End of Sidebar -->
+
+        <!-- Content Wrapper -->
+        <div class="d-flex flex-column content-wrapper">
+
+            <!-- Main Content -->
+            <div id="content">
+
+                <!-- Topbar -->
+                <nav class="navbar navbar-expand navbar-light">
+                    <!-- Sidebar Toggle (Topbar) -->
+                    <button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3">
+                        <i class="fa fa-ellipsis-v"></i>
+                    </button>
+                </nav>
+                <!-- End of Topbar -->
+
+                <!-- Begin Page Content -->
+                <div class="container-fluid justify-content-center" id="relatorio">
+
+                    <!-- Page Heading -->
+                    <div class="d-sm-flex align-items-center justify-content-between mb-4">
+                        <h1 class="h3 mb-0">Seu Progresso</h1>
+                        <h1 class="h6 mb-0">Como essa é uma área focada nas disciplinas, já somamos as atividades complementares.</h1>
+                        <a href="#" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i
+                                class="fas fa-download fa-sm text-white-50"></i> Baixar relatório</a>
+                    </div>
+
+                    <!-- Content Row -->
+                    <div class="row">
+
+                        <!-- Area Chart -->
+                        <div class="col-xl-12 col-md-6 mb-4">
+                            <div class="painel mb-4">
+                                <!-- Card Header - Dropdown -->
+                                <div class="painel-header py-3 d-flex flex-row align-items-center justify-content-between">
+                                    <h2 class="m-0">Disciplinas por semestre</h6>
+                                </div>
+                                <!-- Card Body -->
+                                <div class="card-body">
+                                    <div class="chart-area">
+                                        <canvas id="myAreaChart"></canvas>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row align-items-center">
+                        <!-- Pie Chart -->
+                        <div class="col-xl-6 col-lg-5">
+                            <div class="painel mb-4">
+                                <!-- Card Header - Dropdown -->
+                                <div class="painel-header py-3 d-flex flex-row align-items-center justify-content-between">
+                                    <h2 class="m-0">Horas do curso</h6>
+                                </div>
+
+
+                                <!-- Card Body -->
+                                <div class="card-body" style="display: flex;">
+
+                                    <div class="col-xl-6 col-md-6 mb-4">
+                                        <div class="painel painel-border-left-laranja my-2">
+                                            <div class="card-body">
+                                                <div class="row no-gutters align-items-center">
+                                                    <div class="col-auto margin-icone">
+                                                        <i class="fas fa-hourglass-half fa-2x text-laranja"></i>
+                                                    </div>
+                                                    <div class="col mr-2">
+                                                        <div class="mb-1">
+                                                            Horas completas</div>
+                                                        <div class="h3 mb-0 text-laranja" id="horasCompletas"></div>
+                                                    </div>
+
+                                                </div>
+                                            </div>
+                                        </div>
+
+
+                                        <div class="painel painel-border-left-amarelo my-2">
+                                            <div class="card-body">
+                                                <div class="row no-gutters align-items-center">
+                                                    <div class="col-auto margin-icone">
+                                                        <i class="fas fa-hourglass-half fa-2x text-amarelo"></i>
+                                                    </div>
+                                                    <div class="col mr-2">
+                                                        <div class="mb-1">
+                                                            Horas restantes</div>
+                                                        <div class="h3 mb-0 text-amarelo" id="horasRestantes"></div>
+                                                    </div>
+
+                                                </div>
+                                            </div>
+                                        </div>
+
+
+                                        <div class="painel painel-border-left-azul my-2">
+                                            <div class="card-body">
+                                                <div class="row no-gutters align-items-center">
+                                                    <div class="col-auto margin-icone">
+                                                        <i class="fas fa-hourglass-half fa-2x text-azul"></i>
+                                                    </div>
+                                                    <div class="col mr-2">
+                                                        <div class="mb-1">
+                                                            Horas totais</div>
+                                                        <div class="h3 mb-0 text-azul">2880h</div>
+                                                    </div>
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+
+                                    <div class="chart-pie pt-4 pb-2">
+                                        <canvas id="myPieChart"></canvas>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-xl-1"></div>
+
+                        <div class="col-xl-5 col-lg-5">
+                            <!-- Earnings (Monthly) Card Example -->
+                            <div class="col-xl-12 col-md-6 mb-4">
+                                <div class="painel painel-border-left-azul py-2">
+                                    <div class="card-body">
+                                        <div class="row no-gutters align-items-center">
+                                            <div class="col-auto margin-icone">
+                                                <i class="fas fa-hourglass-half fa-2x text-azul"></i>
+                                            </div>
+                                            <div class="flex align-items-center">
+                                                <div class="h3 mb-0 text-azul mx-2" id="discConluidas"></div>
+                                                <div class="h6 mb-0">Disciplinas concluídas</div>
+                                            </div>
+
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Earnings (Monthly) Card Example -->
+                            <div class="col-xl-12 col-md-6 mb-4">
+                                <div class="painel painel-border-left-laranja py-2">
+                                    <div class="card-body">
+                                        <div class="row no-gutters align-items-center">
+                                            <div class="col-auto margin-icone">
+                                                <i class="fas fa-hourglass-half fa-2x text-laranja"></i>
+                                            </div>
+                                            <div class="flex align-items-center">
+                                                <div class="h3 mb-0 text-laranja mx-2" id="discRestantes"></div>
+                                                <div class="h6 mb-0">Disciplinas restantes</div>
+                                            </div>
+
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Earnings (Monthly) Card Example -->
+                            <div class="col-xl-12 col-md-6 mb-4">
+                                <div class="painel painel-border-left-amarelo py-2">
+                                    <div class="card-body">
+                                        <div class="row no-gutters align-items-center">
+                                            <div class="col-auto margin-icone">
+                                                <i class="fas fa-spinner fa-2x text-amarelo"></i>
+                                            </div>
+                                            <div class="col mr-2">
+                                                <div class="row no-gutters align-items-center">
+                                                    <div class="col-auto">
+                                                        <div class="h3 mb-0 mr-3 text-amarelo" id="porcProgresso"></div>
+                                                    </div>
+                                                    <div class="col">
+                                                        <div class="progress progress-sm mr-2">
+                                                            <div class="progress-bar background-amarelo" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" id="porcBarra"></div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap core JavaScript-->
+    <script src="./../vendor/jquery/jquery.min.js"></script>
+    <script src="./../vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Core plugin JavaScript-->
+    <script src="./../vendor/jquery-easing/jquery.easing.min.js"></script>
+
+    <!-- Custom scripts for all pages-->
+    <script src="./../js/sb-admin-2.min.js"></script>
+
+    <!-- Page level plugins -->
+    <script src="./../vendor/chart.js/Chart.min.js"></script>
+
+    <script src="./../js/script.js"></script>
+    <script src="./../js/graficos.js"></script>
+</body>

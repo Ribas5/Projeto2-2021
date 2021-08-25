@@ -1,24 +1,76 @@
+function number_format(number, decimals, dec_point, thousands_sep) {
+    // *     example: number_format(1234.56, 2, ',', ' ');
+    // *     return: '1 234,56'
+    number = (number + '').replace(',', '').replace(' ', '');
+    var n = !isFinite(+number) ? 0 : +number,
+        prec = !isFinite(+decimals) ? 0 : Math.abs(decimals),
+        sep = (typeof thousands_sep === 'undefined') ? ',' : thousands_sep,
+        dec = (typeof dec_point === 'undefined') ? '.' : dec_point,
+        s = '',
+        toFixedFix = function(n, prec) {
+            var k = Math.pow(10, prec);
+            return '' + Math.round(n * k) / k;
+        };
+    // Fix for IE parseFloat(0.55).toFixed(0) = 0;
+    s = (prec ? toFixedFix(n, prec) : '' + Math.round(n)).split('.');
+    if (s[0].length > 3) {
+        s[0] = s[0].replace(/\B(?=(?:\d{3})+(?!\d))/g, sep);
+    }
+    if ((s[1] || '').length < prec) {
+        s[1] = s[1] || '';
+        s[1] += new Array(prec - s[1].length + 1).join('0');
+    }
+    return s.join(dec);
+}
+
+// Recuperando os valores
+var lista = sessionStorage.getItem("discPorSemestre")
+var lista2 = sessionStorage.getItem("discPorSemestreAtual")
+
+// Chegam como string, retira as víruglas
+var str = lista.replace(/[^0-9]/g, '')
+var str2 = lista2.replace(/[^0-9]/g, '')
+
+var dados = []
+var horasFeitas = 0
+var horasRestantes = 0
+
+// Inserir os números de disciplinas no vetor
+for (let i = 0; i < str.length; i++) {
+    dados.push(parseInt(str[i]))
+}
+
+// Somar as horas feitas
+for (let i = 0; i < str2.length; i++) {
+    horasFeitas += parseInt(str2[i]) * 64
+}
+
+horasFeitas += 64 + 192
+horasRestantes = 2880 - horasFeitas
+
+document.getElementById('horasCompletas').innerHTML = horasFeitas + "h"
+document.getElementById('horasRestantes').innerHTML = horasRestantes + "h"
+
 // Area Chart Example
 var ctx = document.getElementById("myAreaChart");
-var a = 4;
 var myLineChart = new Chart(ctx, {
     type: 'line',
     data: {
-        labels: ["2018.1", "2018.2", "2019.1", "2019.2", "2020.1", "2020.2", "2021.1", "2021.2"],
+        labels: ["1º semestre", "2º semestre", "3º semestre", "4º semestre", "5º semestre", "6º semestre", "7º semestre", "8º semestre"],
         datasets: [{
             label: "Disciplinas",
             lineTension: 0.3,
-            backgroundColor: "rgba(78, 115, 223, 0.05)",
-            borderColor: "rgba(78, 115, 223, 1)",
+            backgroundColor: "rgba(255, 255, 255, 0.5)",
+            borderColor: "rgba(61, 100, 255, 1)",
             pointRadius: 3,
-            pointBackgroundColor: "rgba(78, 115, 223, 1)",
-            pointBorderColor: "rgba(78, 115, 223, 1)",
+            pointBackgroundColor: "rgba(61, 100, 255, 1)",
+            pointBorderColor: "rgba(61, 100, 255, 1)",
             pointHoverRadius: 3,
-            pointHoverBackgroundColor: "rgba(78, 115, 223, 1)",
-            pointHoverBorderColor: "rgba(78, 115, 223, 1)",
+            pointHoverBackgroundColor: "rgba(61, 100, 255, 1)",
+            pointHoverBorderColor: "rgba(61, 100, 255, 1)",
             pointHitRadius: 10,
             pointBorderWidth: 2,
-            data: [a, 5, 5, 5, 5, a, 0, 0],
+            data: dados
         }],
     },
     options: {
@@ -27,15 +79,12 @@ var myLineChart = new Chart(ctx, {
             padding: {
                 left: 10,
                 right: 25,
-                top: 25,
+                top: 15,
                 bottom: 0
             }
         },
         scales: {
             xAxes: [{
-                time: {
-                    unit: 'date'
-                },
                 gridLines: {
                     display: false,
                     drawBorder: false
@@ -46,8 +95,13 @@ var myLineChart = new Chart(ctx, {
             }],
             yAxes: [{
                 ticks: {
-                    maxTicksLimit: 4,
-                    padding: 10
+                    min: 0,
+                    max: 6,
+                    padding: 10,
+                    // Include a dollar sign in the ticks
+                    callback: function(value, index, values) {
+                        return number_format(value);
+                    }
                 },
                 gridLines: {
                     color: "rgb(234, 236, 244)",
@@ -75,20 +129,27 @@ var myLineChart = new Chart(ctx, {
             intersect: false,
             mode: 'index',
             caretPadding: 10,
+            callbacks: {
+                label: function(tooltipItem, chart) {
+                    var datasetLabel = chart.datasets[tooltipItem.datasetIndex].label || '';
+                    return datasetLabel + ': ' + number_format(tooltipItem.yLabel);
+                }
+            }
         }
     }
 });
 
+
+// Pie Chart Example
 var ctx = document.getElementById("myPieChart");
 var myPieChart = new Chart(ctx, {
     type: 'doughnut',
     data: {
-        labels: ["Direct", "Referral", "Social"],
+        labels: ["Horas completadas", "Horas restantes"],
         datasets: [{
-            data: [55, 30, 15],
-            backgroundColor: ['#4e73df', '#1cc88a', '#36b9cc'],
-            hoverBackgroundColor: ['#2e59d9', '#17a673', '#2c9faf'],
-            hoverBorderColor: "rgba(234, 236, 244, 1)",
+            data: [horasFeitas, horasRestantes],
+            backgroundColor: ['#FF772E', '#F6D467'],
+            hoverBackgroundColor: ['#FF772E', '#F6D467'],
         }],
     },
     options: {
@@ -96,16 +157,14 @@ var myPieChart = new Chart(ctx, {
         tooltips: {
             backgroundColor: "rgb(255,255,255)",
             bodyFontColor: "#858796",
-            borderColor: '#dddfeb',
-            borderWidth: 1,
             xPadding: 15,
             yPadding: 15,
-            displayColors: false,
+            displayColors: true,
             caretPadding: 10,
         },
         legend: {
             display: false
         },
-        cutoutPercentage: 80,
+        cutoutPercentage: 50,
     },
 });

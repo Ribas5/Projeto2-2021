@@ -51,7 +51,6 @@ df-messenger {
 
 .margem {
     margin: 20px;
-    background-color: #30324B;
 }
 
 .cor-butao {
@@ -101,4 +100,57 @@ df-messenger {
 .content-wrapper {
     width: 100%;
     overflow-x: hidden;
+}
+
+.painel {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    word-wrap: break-word;
+    background-color: #1E2746;
+    background-clip: border-box;
+    border-radius: 0.5rem;
+}
+
+.painel-header {
+    padding: 0.75rem 1.25rem;
+    margin-bottom: 0;
+}
+
+.painel-font {
+    font-size: 28px;
+    font-weight: 500 !important;
+}
+
+.painel-border-left-azul {
+    border-left: 0.5rem solid #35DFFE !important;
+}
+
+.painel-border-left-amarelo {
+    border-left: 0.5rem solid #F6D467 !important;
+}
+
+.painel-border-left-laranja {
+    border-left: 0.5rem solid #FF772E !important;
+}
+
+.text-azul {
+    color: #35DFFE;
+}
+
+.text-amarelo {
+    color: #F6D467;
+}
+
+.background-amarelo {
+    background-color: #F6D467;
+}
+
+.text-laranja {
+    color: #FF772E;
+}
+
+.margin-icone {
+    margin-right: 1.25rem;
 }
