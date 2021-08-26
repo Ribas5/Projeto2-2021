@@ -19,7 +19,7 @@
 
 </head>
 
-<body id="page-top" class="inicial">
+<body id="page-top" class="formProgreso">
 
     <!-- Page Wrapper -->
     <div id="wrapper">
@@ -59,22 +59,22 @@
 
         <!-- Content Wrapper -->
         <div class="d-flex flex-column content-wrapper">
+            <!-- Topbar -->
+            <nav class="navbar navbar-expand navbar-light">
+                <!-- Sidebar Toggle (Topbar) -->
+                <button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3">
+                    <i class="fa fa-ellipsis-v"></i>
+                </button>
+            </nav>
+            <!-- End of Topbar -->
 
             <!-- Main Content -->
-            <div id="content">
+            <div id="content" class="margem">
 
-                <!-- Topbar -->
-                <nav class="navbar navbar-expand navbar-light">
-                    <!-- Sidebar Toggle (Topbar) -->
-                    <button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3">
-                        <i class="fa fa-ellipsis-v"></i>
-                    </button>
-                </nav>
-                <!-- End of Topbar -->
-
-                <div class="margem" id="semestre">
-                    <label for="semestre">Selecione o seu semestre:</label>
-                    <select name="semestre" id="selecSemestre">
+                <div style="padding-top: 20px; background-color: #1E2746; border: 0; border-radius: 15px;">
+                    <div class="margem" id="semestre">
+                        <label for="semestre">Selecione o seu semestre:</label>
+                        <select name="semestre" id="selecSemestre">
                         <option hidden>Semestre</option>
                         <option value="1">1º semestre</option>
                         <option value="2">2º semestre</option>
@@ -86,163 +86,165 @@
                         <option value="8">8º semestre</option>
                         <option value="9">+ 8º semestre</option>
                     </select>
-                </div>
+                    </div>
 
-                <!-- Formulário -->
-                <div class="margem" id="formulario" style="display: none;">
-                    <h1>Disciplinas obrigatórias e eletivas que você já cursou. Desmarque caso não tenha cursado ainda.</h1>
+                    <!-- Formulário -->
+                    <div class="margem" id="formulario">
+                        <h1 class="mb-4">Disciplinas obrigatórias e eletivas que você já cursou. Desmarque caso não tenha cursado ainda.</h1>
 
-                    <form id="formSelect">
+                        <form id="formSelect">
 
-                        <div class="accordion" id="accordionExample">
+                            <div class="accordion" id="accordionExample">
 
-                            <div class="card">
-                                <div class="card-header" id="headingOne">
-                                    <h2 class="mb-0">
-                                        <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                <div class="card" style="border: 0;">
+                                    <div class="card-header cor flex justify-content-center" id="headingOne" style="border: 0; border-radius: 20px;">
+                                        <h2 class="mb-0">
+                                            <button class="btn font-weight-bold" style="color: #FFF;" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
                                         1º semestre
                                       </button>
-                                    </h2>
-                                </div>
+                                        </h2>
+                                    </div>
 
-                                <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
-                                    <div class="card-body">
-                                        <div>
-                                            <input type="checkbox" name="disciplinasObrigatorias">
-                                            <label> SMD0094 - Introdução a Sistemas e Mídias Digitais</label>
-                                        </div>
-                                        <div>
-                                            <input type="checkbox" name="disciplinasObrigatorias">
-                                            <label> SMD0088 - Autoração Multimídia I</label>
-                                        </div>
-                                        <div>
-                                            <input type="checkbox" name="disciplinasObrigatorias">
-                                            <label> SMD0089 - Desenho I</label>
-                                        </div>
-                                        <div>
-                                            <input type="checkbox" name="disciplinasObrigatorias">
-                                            <label> SMD0091 - História do Design</label>
-                                        </div>
-                                        <div>
-                                            <input type="checkbox" name="disciplinasObrigatorias">
-                                            <label> SMD0095 - Programação I</label>
+                                    <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
+                                        <div class="card-body flex-formulario">
+                                            <div>
+                                                <input type="checkbox" class="btn-check" id="btn-check-outlined" name="disciplinasObrigatorias" autocomplete="off">
+                                                <label class="botao-formulario botao-formulario-cor" for="btn-check-outlined">SMD0094 - Introdução a Sistemas e Mídias Digitais</label>
+                                            </div>
+                                            <div>
+                                                <input type="checkbox" class="btn-check" id="btn-check-outlined2" name="disciplinasObrigatorias" autocomplete="off">
+                                                <label class="botao-formulario botao-formulario-cor" for="btn-check-outlined2">SMD0088 - Autoração Multimídia I</label>
+                                            </div>
+                                            <div>
+                                                <input type="checkbox" class="btn-check" id="btn-check-outlined3" name="disciplinasObrigatorias" autocomplete="off">
+                                                <label class="botao-formulario botao-formulario-cor" for="btn-check-outlined3">SMD0089 - Desenho I</label>
+                                            </div>
+                                            <div>
+                                                <input type="checkbox" class="btn-check" id="btn-check-outlined4" name="disciplinasObrigatorias" autocomplete="off">
+                                                <label class="botao-formulario botao-formulario-cor" for="btn-check-outlined4">SMD0091 - História do Design</label>
+                                            </div>
+                                            <div>
+                                                <input type="checkbox" class="btn-check" id="btn-check-outlined5" name="disciplinasObrigatorias" autocomplete="off">
+                                                <label class="botao-formulario botao-formulario-cor" for="btn-check-outlined5">SMD0095 - Programação I</label>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
-                            </div>
 
 
 
-                            <div class="card">
-                                <div class="card-header" id="headingTwo">
-                                    <h2 class="mb-0">
-                                        <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
+                                <div class="card" style="border: 0;">
+                                    <div class="card-header cor flex justify-content-center" id="headingTwo" style="border: 0; border-radius: 20px;">
+                                        <h2 class="mb-0">
+                                            <button class="btn font-weight-bold" style="color: #FFF;" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
                                         2º semestre
                                       </button>
-                                    </h2>
-                                </div>
-                                <div id="collapseTwo" class="collapse show" aria-labelledby="headingTwo" data-parent="#accordionExample">
-                                    <div class="card-body">
-                                        <div>
-                                            <input type="checkbox" name="disciplinasObrigatorias">
-                                            <label> SMD0107 - Cognição e Tecnologias Digitais</label>
-                                        </div>
-                                        <div>
-                                            <input type="checkbox" name="disciplinasObrigatorias">
-                                            <label> SMD0093 - Narrativas Multimídia</label>
-                                        </div>
-                                        <div>
-                                            <input type="checkbox" name="disciplinasObrigatorias">
-                                            <label> SMD0095 - Programação II</label>
-                                        </div>
-                                        <div>
-                                            <input type="checkbox" name="disciplinasObrigatorias">
-                                            <label> SMD0105 - Comunicação Visual I</label>
-                                        </div>
-                                        <div>
-                                            <input type="checkbox" name="disciplinasObrigatorias">
-                                            <label> SMD0106 - Mamtemática Aplicada à Multimídia I</label>
+                                        </h2>
+                                    </div>
+                                    <div id="collapseTwo" class="collapse show" aria-labelledby="headingTwo" data-parent="#accordionExample">
+                                        <div class="card-body flex-formulario">
+                                            <div>
+                                                <input type="checkbox" class="btn-check" id="btn-check-outlined6" name="disciplinasObrigatorias" autocomplete="off">
+                                                <label class="botao-formulario botao-formulario-cor" for="btn-check-outlined6">SMD0107 - Cognição e Tecnologias Digitais</label>
+                                            </div>
+                                            <div>
+                                                <input type="checkbox" class="btn-check" id="btn-check-outlined7" name="disciplinasObrigatorias" autocomplete="off">
+                                                <label class="botao-formulario botao-formulario-cor" for="btn-check-outlined7">SMD0093 - Narrativas Multimídia</label>
+                                            </div>
+                                            <div>
+                                                <input type="checkbox" class="btn-check" id="btn-check-outlined8" name="disciplinasObrigatorias" autocomplete="off">
+                                                <label class="botao-formulario botao-formulario-cor" for="btn-check-outlined8">SMD0095 - Programação II</label>
+                                            </div>
+                                            <div>
+                                                <input type="checkbox" class="btn-check" id="btn-check-outlined9" name="disciplinasObrigatorias" autocomplete="off">
+                                                <label class="botao-formulario botao-formulario-cor" for="btn-check-outlined9">SMD0105 - Comunicação Visual I</label>
+                                            </div>
+                                            <div>
+                                                <input type="checkbox" class="btn-check" id="btn-check-outlined10" name="disciplinasObrigatorias" autocomplete="off">
+                                                <label class="botao-formulario botao-formulario-cor" for="btn-check-outlined10">SMD0106 - Mamtemática Aplicada à Multimídia I</label>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
-                            </div>
 
 
 
-                            <div class="card" style="border: 0; border-radius: 20px;">
-                                <div class="card-header" id="headingThree" style="background-color: darkseagreen; color: deeppink;">
-                                    <h2 class="mb-0">
-                                        <button class="btn" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="true" aria-controls="collapseThree">
+                                <div class="card" style="border: 0;">
+                                    <div class="card-header cor flex justify-content-center" id="headingThree" style="border: 0; border-radius: 20px;">
+                                        <h2 class="mb-0">
+                                            <button class="btn font-weight-bold" style="color: #FFF;" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="true" aria-controls="collapseThree">
                                         3º semestre
                                       </button>
-                                    </h2>
-                                </div>
-                                <div id="collapseThree" class="collapse show" aria-labelledby="headingThree" data-parent="#accordionExample" style="background-color: darkgreen; color: cornflowerblue;">
-                                    <div class="card-body">
-                                        <div>
-                                            <input type="checkbox" name="disciplinasObrigatorias">
-                                            <label> SMD0092 - Projeto Integrado I</label>
+                                        </h2>
+                                    </div>
+                                    <div id="collapseThree" class="collapse show" style="background-color: transparent;" aria-labelledby="headingThree" data-parent="#accordionExample">
+                                        <div class="card-body flex-formulario">
+                                            <div>
+                                                <input type="checkbox" class="btn-check" id="btn-check" name="disciplinasObrigatorias" autocomplete="off">
+                                                <label class="botao-formulario botao-formulario-cor" for="btn-check">SMD0092 - Projeto Integrado I</label>
+                                            </div>
+                                            <div>
+                                                <input type="checkbox" class="btn-check" id="btn-check2" name="disciplinasObrigatorias" autocomplete="off">
+                                                <label class="botao-formulario botao-formulario-cor" for="btn-check2">SMD0015 - Design de Interfaces Gráficas</label>
+                                            </div>
+                                            <div>
+                                                <input type="checkbox" class="btn-check" id="btn-check3" name="disciplinasObrigatorias" autocomplete="off">
+                                                <label class="botao-formulario botao-formulario-cor" for="btn-check3">SMD0088 - Autoração Multimídia II</label>
+                                            </div>
+                                            <div>
+                                                <input type="checkbox" class="btn-check" id="btn-check4" name="disciplinasObrigatorias" autocomplete="off">
+                                                <label class="botao-formulario botao-formulario-cor" for="btn-check4">SMD0108 - Interação Humano-Computador I</label>
+                                            </div>
+                                            <div>
+                                                <input type="checkbox" class="btn-check" id="btn-check5" name="disciplinasObrigatorias" autocomplete="off">
+                                                <label class="botao-formulario botao-formulario-cor" for="btn-check5">SMD0109 - Introdução à Cibercultura</label>
+                                            </div>
                                         </div>
-                                        <div>
-                                            <input type="checkbox" name="disciplinasObrigatorias">
-                                            <label> SMD0015 - Design de Interfaces Gráficas</label>
-                                        </div>
-                                        <div>
-                                            <input type="checkbox" name="disciplinasObrigatorias">
-                                            <label> SMD0088 - Autoração Multimídia II</label>
-                                        </div>
-                                        <div>
-                                            <input type="checkbox" name="disciplinasObrigatorias">
-                                            <label> SMD0108 - Interação Humano-Computador I</label>
-                                        </div>
-                                        <div>
-                                            <input type="checkbox" name="disciplinasObrigatorias">
-                                            <label> SMD0109 - Introdução à Cibercultura</label>
-                                        </div>
+
                                     </div>
                                 </div>
-                            </div>
 
 
 
-                            <div class="card">
-                                <div class="card-header" id="headingFour">
-                                    <h2 class="mb-0">
-                                        <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseFour" aria-expanded="true" aria-controls="collapseFour">
+                                <div class="card" style="border: 0;">
+                                    <div class="card-header cor flex justify-content-center" id="headingFour" style="border: 0; border-radius: 20px;">
+                                        <h2 class="mb-0">
+                                            <button class="btn font-weight-bold" style="color: #FFF;" type="button" data-toggle="collapse" data-target="#collapseFour" aria-expanded="true" aria-controls="collapseFour">
                                         4º semestre
                                       </button>
-                                    </h2>
-                                </div>
+                                        </h2>
+                                    </div>
 
-                                <div id="collapseFour" class="collapse show" aria-labelledby="headingFour" data-parent="#accordionExample">
-                                    <div class="card-body">
-                                        <div>
-                                            <input type="checkbox" name="disciplinasObrigatorias">
-                                            <label> SMD0102 - Metodologia de Pesquisa Científica</label>
-                                        </div>
-                                        <div>
-                                            <input type="checkbox" name="disciplinasObrigatorias">
-                                            <label> SMD0030	- Análise e Projeto de Sistemas</label>
-                                        </div>
-                                        <div>
-                                            <input type="checkbox" name="disciplinasObrigatorias">
-                                            <label> SMD0033 - Estrutura de Dados</label>
-                                        </div>
-                                        <div>
-                                            <input type="checkbox" name="disciplinasObrigatorias">
-                                            <label> SMD0037 - Redes de Compútadores</label>
-                                        </div>
-                                        <div>
-                                            <input type="checkbox" name="disciplinasObrigatorias">
-                                            <label> SMD0086 - Fotografia Digital</label>
-                                        </div>
-                                        <div>
-                                            <input type="checkbox" name="disciplinasObrigatorias">
-                                            <label> SMD0090 - Semiótica Aplicada</label>
-                                        </div>
-                                        <div>
-                                            <input type="checkbox" name="disciplinasObrigatorias">
-                                            <label> SMD0098 - Desenho II</label>
+                                    <div id="collapseFour" class="collapse show" aria-labelledby="headingFour" data-parent="#accordionExample">
+                                        <div class="card-body flex-formulario">
+                                            <div>
+                                                <input type="checkbox" class="btn-check" id="btn-check6" name="disciplinasObrigatorias" autocomplete="off">
+                                                <label class="botao-formulario botao-formulario-cor" for="btn-check6">SMD0102 - Metodologia de Pesquisa Científica</label>
+                                            </div>
+                                            <div>
+                                                <input type="checkbox" class="btn-check" id="btn-check7" name="disciplinasObrigatorias" autocomplete="off">
+                                                <label class="botao-formulario botao-formulario-cor" for="btn-check7">SMD0030 - Análise e Projeto de Sistemas</label>
+                                            </div>
+                                            <div>
+                                                <input type="checkbox" class="btn-check" id="btn-check8" name="disciplinasObrigatorias" autocomplete="off">
+                                                <label class="botao-formulario botao-formulario-cor" for="btn-check8">SMD0033 - Estrutura de Dados</label>
+                                            </div>
+                                            <div>
+                                                <input type="checkbox" class="btn-check" id="btn-check9" name="disciplinasObrigatorias" autocomplete="off">
+                                                <label class="botao-formulario botao-formulario-cor" for="btn-check9">SMD0037 - Redes de Computadores</label>
+                                            </div>
+                                            <div>
+                                                <input type="checkbox" class="btn-check" id="btn-check23" name="disciplinasObrigatorias" autocomplete="off">
+                                                <label class="botao-formulario botao-formulario-cor" for="btn-check23">SMD0086 - Fotografia Digital</label>
+                                            </div>
+                                            <div>
+                                                <input type="checkbox" class="btn-check" id="btn-check11" name="disciplinasObrigatorias" autocomplete="off">
+                                                <label class="botao-formulario botao-formulario-cor" for="btn-check11">SMD0090 - Semiótica Aplicada</label>
+                                            </div>
+                                            <div>
+                                                <input type="checkbox" class="btn-check" id="btn-check12" name="disciplinasObrigatorias" autocomplete="off">
+                                                <label class="botao-formulario botao-formulario-cor" for="btn-check12">SMD0098 - Desenho II</label>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -251,32 +253,32 @@
 
 
 
-                            <div class="card">
-                                <div class="card-header" id="headingFive">
+                            <div class="card" style="border: 0;">
+                                <div class="card-header cor flex justify-content-center" id="headingFive" style="border: 0; border-radius: 20px;">
                                     <h2 class="mb-0">
-                                        <button class="btn btn-link " type="button" data-toggle="collapse" data-target="#collapseFive" aria-expanded="true" aria-controls="collapseFive">
+                                        <button class="btn font-weight-bold" style="color: #FFF;" type="button" data-toggle="collapse" data-target="#collapseFive" aria-expanded="true" aria-controls="collapseFive">
                                         5º semestre
                                       </button>
                                     </h2>
                                 </div>
 
                                 <div id="collapseFive" class="collapse show" aria-labelledby="headingFive" data-parent="#accordionExample">
-                                    <div class="card-body">
+                                    <div class="card-body flex-formulario">
                                         <div>
-                                            <input type="checkbox" name="disciplinasObrigatorias">
-                                            <label> SMD0032 - Design de Som</label>
+                                            <input type="checkbox" class="btn-check" id="btn-check13" name="disciplinasObrigatorias" autocomplete="off">
+                                            <label class="botao-formulario botao-formulario-cor" for="btn-check13">SMD0032 - Design de Som</label>
                                         </div>
                                         <div>
-                                            <input type="checkbox" name="disciplinasObrigatorias">
-                                            <label> SMD0055 - Engenharia de Software</label>
+                                            <input type="checkbox" class="btn-check" id="btn-check14" name="disciplinasObrigatorias" autocomplete="off">
+                                            <label class="botao-formulario botao-formulario-cor" for="btn-check14">SMD0055 - Engenharia de Software</label>
                                         </div>
                                         <div>
-                                            <input type="checkbox" name="disciplinasObrigatorias">
-                                            <label> SMD0099 - Banco de Dados I</label>
+                                            <input type="checkbox" class="btn-check" id="btn-check15" name="disciplinasObrigatorias" autocomplete="off">
+                                            <label class="botao-formulario botao-formulario-cor" for="btn-check15">SMD0099 - Banco de Dados I</label>
                                         </div>
                                         <div>
-                                            <input type="checkbox" name="disciplinasObrigatorias">
-                                            <label> SMD0110 - Comunicação Visual II</label>
+                                            <input type="checkbox" class="btn-check" id="btn-check16" name="disciplinasObrigatorias" autocomplete="off">
+                                            <label class="botao-formulario botao-formulario-cor" for="btn-check16">SMD0110 - Comunicação Visual II</label>
                                         </div>
                                     </div>
                                 </div>
@@ -284,24 +286,24 @@
 
 
 
-                            <div class="card">
-                                <div class="card-header" id="headingSix">
+                            <div class="card" style="border: 0;">
+                                <div class="card-header cor flex justify-content-center" id="headingSix" style="border: 0; border-radius: 20px;">
                                     <h2 class="mb-0">
-                                        <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseSix" aria-expanded="true" aria-controls="collapseSix">
+                                        <button class="btn font-weight-bold" style="color: #FFF;" type="button" data-toggle="collapse" data-target="#collapseSix" aria-expanded="true" aria-controls="collapseSix">
                                         6º semestre
                                       </button>
                                     </h2>
                                 </div>
 
                                 <div id="collapseSix" class="collapse show" aria-labelledby="headingSix" data-parent="#accordionExample">
-                                    <div class="card-body">
+                                    <div class="card-body flex-formulario">
                                         <div>
-                                            <input type="checkbox" name="disciplinasObrigatorias">
-                                            <label> SMD0025 - Ética e Política Autoral</label>
+                                            <input type="checkbox" class="btn-check" id="btn-check17" name="disciplinasObrigatorias" autocomplete="off">
+                                            <label class="botao-formulario botao-formulario-cor" for="btn-check17">SMD0025 - Ética e Política Autoral</label>
                                         </div>
                                         <div>
-                                            <input type="checkbox" name="disciplinasObrigatorias">
-                                            <label> SMD0100 - Gestão de Projetos Multimídia</label>
+                                            <input type="checkbox" class="btn-check" id="btn-check18" name="disciplinasObrigatorias" autocomplete="off">
+                                            <label class="botao-formulario botao-formulario-cor" for="btn-check18">SMD0100 - Gestão de Projetos Multimídia</label>
                                         </div>
                                     </div>
                                 </div>
@@ -310,24 +312,24 @@
 
 
 
-                            <div class="card">
-                                <div class="card-header" id="headingSeven">
+                            <div class="card" style="border: 0;">
+                                <div class="card-header cor flex justify-content-center" id="headingSeven" style="border: 0; border-radius: 20px;">
                                     <h2 class="mb-0">
-                                        <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseSeven" aria-expanded="true" aria-controls="collapseSeven">
+                                        <button class="btn font-weight-bold" style="color: #FFF;" type="button" data-toggle="collapse" data-target="#collapseSeven" aria-expanded="true" aria-controls="collapseSeven">
                                         7º semestre
                                       </button>
                                     </h2>
                                 </div>
 
                                 <div id="collapseSeven" class="collapse show" aria-labelledby="headingSeven" data-parent="#accordionExample">
-                                    <div class="card-body">
+                                    <div class="card-body flex-formulario">
                                         <div>
-                                            <input type="checkbox" name="disciplinasObrigatorias">
-                                            <label> SMD0101 - Projeto Integrado II</label>
+                                            <input type="checkbox" class="btn-check" id="btn-check19" name="disciplinasObrigatorias" autocomplete="off">
+                                            <label class="botao-formulario botao-formulario-cor" for="btn-check19">SMD0101 - Projeto Integrado II</label>
                                         </div>
                                         <div>
-                                            <input type="checkbox" name="disciplinasObrigatorias">
-                                            <label> SMD0111 - Projeto de Trabalho Final</label>
+                                            <input type="checkbox" class="btn-check" id="btn-check20" name="disciplinasObrigatorias" autocomplete="off">
+                                            <label class="botao-formulario botao-formulario-cor" for="btn-check20">SMD0111 - Projeto de Trabalho Final</label>
                                         </div>
                                     </div>
                                 </div>
@@ -335,612 +337,612 @@
 
 
 
-                            <div class="card">
-                                <div class="card-header" id="headingEight">
+                            <div class="card" style="border: 0;">
+                                <div class="card-header cor flex justify-content-center" id="headingEight" style="border: 0; border-radius: 20px;">
                                     <h2 class="mb-0">
-                                        <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseEight" aria-expanded="true" aria-controls="collapseEight">
+                                        <button class="btn font-weight-bold" style="color: #FFF;" type="button" data-toggle="collapse" data-target="#collapseEight" aria-expanded="true" aria-controls="collapseEight">
                                         8º semestre
                                       </button>
                                     </h2>
                                 </div>
 
                                 <div id="collapseEight" class="collapse show" aria-labelledby="headingEight" data-parent="#accordionExample">
-                                    <div class="card-body">
+                                    <div class="card-body flex-formulario">
                                         <div>
-                                            <input type="checkbox" name="disciplinasObrigatorias">
-                                            <label> SMD0077 - Trabalho de Conclusão de Curso</label>
+                                            <input type="checkbox" class="btn-check" id="btn-check21" name="disciplinasObrigatorias" autocomplete="off">
+                                            <label class="botao-formulario botao-formulario-cor" for="btn-check21">SMD0077 - Trabalho de Conclusão de Curso</label>
                                         </div>
                                         <div>
-                                            <input type="checkbox" name="disciplinasObrigatorias">
-                                            <label> SMD0103 - Seminários em Multimídia</label>
+                                            <input type="checkbox" class="btn-check" id="btn-check22" name="disciplinasObrigatorias" autocomplete="off">
+                                            <label class="botao-formulario botao-formulario-cor" for="btn-check22">SMD0103 - Seminários em Multimídia</label>
                                         </div>
                                     </div>
                                 </div>
                             </div>
 
-                        </div>
+                    </div>
 
-                        <br>
-                        <h1>Marque as disciplinas optativias que já cursou.</h1><br>
-                        <div class="accordion" id="accordionExample2">
+                    <br>
+                    <h1>Marque as disciplinas optativias que já cursou.</h1><br>
+                    <div class="accordion" id="accordionExample2">
 
-                            <div class="card">
-                                <div class="card-header" id="headingOne2">
-                                    <h2 class="mb-0">
-                                        <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseOne2" aria-expanded="false" aria-controls="collapseOne2">
+                        <div class="card mb-2" style="border: 0;">
+                            <div class="card-header cor flex justify-content-center" id="headingOne2" style="border: 0; border-radius: 20px;">
+                                <h2 class="mb-0">
+                                    <button class="btn collapsed font-weight-bold" style="color: #FFF;" type="button" data-toggle="collapse" data-target="#collapseOne2" aria-expanded="false" aria-controls="collapseOne2">
                                         Programação
                                       </button>
-                                    </h2>
-                                </div>
+                                </h2>
+                            </div>
 
-                                <div id="collapseOne2" class="collapse" aria-labelledby="headingOne2" data-parent="#accordionExample2">
-                                    <div class="card-body">
-                                        <div>
-                                            <input type="checkbox" name="disciplinasOptativas">
-                                            <label> SMD0017 - Programação Orientada a Objetos</label>
-                                        </div>
-                                        <div>
-                                            <input type="checkbox" name="disciplinasOptativas">
-                                            <label> SMD0020 - Prototipação de Jogos Tridimensionais</label>
-                                        </div>
-                                        <div>
-                                            <input type="checkbox" name="disciplinasOptativas">
-                                            <label> SMD0028 - Laboratório de Programação</label>
-                                        </div>
-                                        <div>
-                                            <input type="checkbox" name="disciplinasOptativas">
-                                            <label> SMD0029 - Ambientes Virtuais de Aprendizagem</label>
-                                        </div>
-                                        <div>
-                                            <input type="checkbox" name="disciplinasOptativas">
-                                            <label> SMD0035 - Mamtemática e Física para Jogos</label>
-                                        </div>
-                                        <div>
-                                            <input type="checkbox" name="disciplinasOptativas">
-                                            <label> SMD0038 - Álgebra Computacional para Programação</label>
-                                        </div>
-                                        <div>
-                                            <input type="checkbox" name="disciplinasOptativas">
-                                            <label> SMD0044 - Introdução à Computação Móvel e Ubíqua</label>
-                                        </div>
-                                        <div>
-                                            <input type="checkbox" name="disciplinasOptativas">
-                                            <label> SMD0045 - Linguagem de Programação Script</label>
-                                        </div>
-                                        <div>
-                                            <input type="checkbox" name="disciplinasOptativas">
-                                            <label> SMD0048 - Teste de Software Aplicado</label>
-                                        </div>
-                                        <div>
-                                            <input type="checkbox" name="disciplinasOptativas">
-                                            <label> SMD0050 - Sistemas Distribuídos</label>
-                                        </div>
-                                        <div>
-                                            <input type="checkbox" name="disciplinasOptativas">
-                                            <label> SMD0052 - Programação para Web I</label>
-                                        </div>
-                                        <div>
-                                            <input type="checkbox" name="disciplinasOptativas">
-                                            <label> SMD0069 - Programação para Web II</label>
-                                        </div>
-                                        <div>
-                                            <input type="checkbox" name="disciplinasOptativas">
-                                            <label> SMD0052 - Programação para Jogos I</label>
-                                        </div>
-                                        <div>
-                                            <input type="checkbox" name="disciplinasOptativas">
-                                            <label> SMD0069 - Programação para Jogos II</label>
-                                        </div>
-                                        <div>
-                                            <input type="checkbox" name="disciplinasOptativas">
-                                            <label> SMD0054 - Inteligência Computacional Aplicada a Jogos I</label>
-                                        </div>
-                                        <div>
-                                            <input type="checkbox" name="disciplinasOptativas">
-                                            <label> SMD0081 - Inteligência Computacional Aplicada a Jogos II</label>
-                                        </div>
-                                        <div>
-                                            <input type="checkbox" name="disciplinasOptativas">
-                                            <label> SMD0058 - Banco de Dados Aplicado à Multimídia</label>
-                                        </div>
-                                        <div>
-                                            <input type="checkbox" name="disciplinasOptativas">
-                                            <label> SMD0065 - Desenvolvimento de Aplicações Distribuídas</label>
-                                        </div>
-                                        <div>
-                                            <input type="checkbox" name="disciplinasOptativas">
-                                            <label> SMD0066 - Autoração de Mídia de Armazenamento Local</label>
-                                        </div>
-                                        <div>
-                                            <input type="checkbox" name="disciplinasOptativas">
-                                            <label> SMD0073 - Jogos Multiplataforma</label>
-                                        </div>
-                                        <div>
-                                            <input type="checkbox" name="disciplinasOptativas">
-                                            <label> SMD0074 - Jogos Distribuídos</label>
-                                        </div>
-                                        <div>
-                                            <input type="checkbox" name="disciplinasOptativas">
-                                            <label> SMD0070 - Sistemas Embarcados</label>
-                                        </div>
-                                        <div>
-                                            <input type="checkbox" name="disciplinasOptativas">
-                                            <label> SMD0078 - Desenvolvimento de Jogos Casuais</label>
-                                        </div>
-                                        <div>
-                                            <input type="checkbox" name="disciplinasOptativas">
-                                            <label> SMD0079 - Desenvolvimento de Motores Gráficos</label>
-                                        </div>
-                                        <div>
-                                            <input type="checkbox" name="disciplinasOptativas">
-                                            <label> SMD0080 - Computação Gráfica</label>
-                                        </div>
-                                        <div>
-                                            <input type="checkbox" name="disciplinasOptativas">
-                                            <label> SMD0082 - Jogos para Console</label>
-                                        </div>
-                                        <div>
-                                            <input type="checkbox" name="disciplinasOptativas">
-                                            <label> SMD0085 - Frameworks de Software</label>
-                                        </div>
-                                        <div>
-                                            <input type="checkbox" name="disciplinasOptativas">
-                                            <label> SMD0114 - Computação Física</label>
-                                        </div>
-                                        <div>
-                                            <input type="checkbox" name="disciplinasOptativas">
-                                            <label> SMD0121 - Análise de Desempenho</label>
-                                        </div>
-                                        <div>
-                                            <input type="checkbox" name="disciplinasOptativas">
-                                            <label> SMD0122 - Programação para Dispositivos Móveis</label>
-                                        </div>
-                                        <div>
-                                            <input type="checkbox" name="disciplinasOptativas">
-                                            <label> SMD0123 - Computação Móvel e Ubíqua</label>
-                                        </div>
-                                        <div>
-                                            <input type="checkbox" name="disciplinasOptativas">
-                                            <label> SMD0133 - Laboratório de Computação Gráfica</label>
-                                        </div>
+                            <div id="collapseOne2" class="collapse" aria-labelledby="headingOne2" data-parent="#accordionExample2">
+                                <div class="card-body">
+                                    <div>
+                                        <input type="checkbox" name="disciplinasOptativas">
+                                        <label> SMD0017 - Programação Orientada a Objetos</label>
+                                    </div>
+                                    <div>
+                                        <input type="checkbox" name="disciplinasOptativas">
+                                        <label> SMD0020 - Prototipação de Jogos Tridimensionais</label>
+                                    </div>
+                                    <div>
+                                        <input type="checkbox" name="disciplinasOptativas">
+                                        <label> SMD0028 - Laboratório de Programação</label>
+                                    </div>
+                                    <div>
+                                        <input type="checkbox" name="disciplinasOptativas">
+                                        <label> SMD0029 - Ambientes Virtuais de Aprendizagem</label>
+                                    </div>
+                                    <div>
+                                        <input type="checkbox" name="disciplinasOptativas">
+                                        <label> SMD0035 - Mamtemática e Física para Jogos</label>
+                                    </div>
+                                    <div>
+                                        <input type="checkbox" name="disciplinasOptativas">
+                                        <label> SMD0038 - Álgebra Computacional para Programação</label>
+                                    </div>
+                                    <div>
+                                        <input type="checkbox" name="disciplinasOptativas">
+                                        <label> SMD0044 - Introdução à Computação Móvel e Ubíqua</label>
+                                    </div>
+                                    <div>
+                                        <input type="checkbox" name="disciplinasOptativas">
+                                        <label> SMD0045 - Linguagem de Programação Script</label>
+                                    </div>
+                                    <div>
+                                        <input type="checkbox" name="disciplinasOptativas">
+                                        <label> SMD0048 - Teste de Software Aplicado</label>
+                                    </div>
+                                    <div>
+                                        <input type="checkbox" name="disciplinasOptativas">
+                                        <label> SMD0050 - Sistemas Distribuídos</label>
+                                    </div>
+                                    <div>
+                                        <input type="checkbox" name="disciplinasOptativas">
+                                        <label> SMD0052 - Programação para Web I</label>
+                                    </div>
+                                    <div>
+                                        <input type="checkbox" name="disciplinasOptativas">
+                                        <label> SMD0069 - Programação para Web II</label>
+                                    </div>
+                                    <div>
+                                        <input type="checkbox" name="disciplinasOptativas">
+                                        <label> SMD0052 - Programação para Jogos I</label>
+                                    </div>
+                                    <div>
+                                        <input type="checkbox" name="disciplinasOptativas">
+                                        <label> SMD0069 - Programação para Jogos II</label>
+                                    </div>
+                                    <div>
+                                        <input type="checkbox" name="disciplinasOptativas">
+                                        <label> SMD0054 - Inteligência Computacional Aplicada a Jogos I</label>
+                                    </div>
+                                    <div>
+                                        <input type="checkbox" name="disciplinasOptativas">
+                                        <label> SMD0081 - Inteligência Computacional Aplicada a Jogos II</label>
+                                    </div>
+                                    <div>
+                                        <input type="checkbox" name="disciplinasOptativas">
+                                        <label> SMD0058 - Banco de Dados Aplicado à Multimídia</label>
+                                    </div>
+                                    <div>
+                                        <input type="checkbox" name="disciplinasOptativas">
+                                        <label> SMD0065 - Desenvolvimento de Aplicações Distribuídas</label>
+                                    </div>
+                                    <div>
+                                        <input type="checkbox" name="disciplinasOptativas">
+                                        <label> SMD0066 - Autoração de Mídia de Armazenamento Local</label>
+                                    </div>
+                                    <div>
+                                        <input type="checkbox" name="disciplinasOptativas">
+                                        <label> SMD0073 - Jogos Multiplataforma</label>
+                                    </div>
+                                    <div>
+                                        <input type="checkbox" name="disciplinasOptativas">
+                                        <label> SMD0074 - Jogos Distribuídos</label>
+                                    </div>
+                                    <div>
+                                        <input type="checkbox" name="disciplinasOptativas">
+                                        <label> SMD0070 - Sistemas Embarcados</label>
+                                    </div>
+                                    <div>
+                                        <input type="checkbox" name="disciplinasOptativas">
+                                        <label> SMD0078 - Desenvolvimento de Jogos Casuais</label>
+                                    </div>
+                                    <div>
+                                        <input type="checkbox" name="disciplinasOptativas">
+                                        <label> SMD0079 - Desenvolvimento de Motores Gráficos</label>
+                                    </div>
+                                    <div>
+                                        <input type="checkbox" name="disciplinasOptativas">
+                                        <label> SMD0080 - Computação Gráfica</label>
+                                    </div>
+                                    <div>
+                                        <input type="checkbox" name="disciplinasOptativas">
+                                        <label> SMD0082 - Jogos para Console</label>
+                                    </div>
+                                    <div>
+                                        <input type="checkbox" name="disciplinasOptativas">
+                                        <label> SMD0085 - Frameworks de Software</label>
+                                    </div>
+                                    <div>
+                                        <input type="checkbox" name="disciplinasOptativas">
+                                        <label> SMD0114 - Computação Física</label>
+                                    </div>
+                                    <div>
+                                        <input type="checkbox" name="disciplinasOptativas">
+                                        <label> SMD0121 - Análise de Desempenho</label>
+                                    </div>
+                                    <div>
+                                        <input type="checkbox" name="disciplinasOptativas">
+                                        <label> SMD0122 - Programação para Dispositivos Móveis</label>
+                                    </div>
+                                    <div>
+                                        <input type="checkbox" name="disciplinasOptativas">
+                                        <label> SMD0123 - Computação Móvel e Ubíqua</label>
+                                    </div>
+                                    <div>
+                                        <input type="checkbox" name="disciplinasOptativas">
+                                        <label> SMD0133 - Laboratório de Computação Gráfica</label>
                                     </div>
                                 </div>
                             </div>
+                        </div>
 
 
 
 
-                            <div class="card">
-                                <div class="card-header" id="headingTwo2">
-                                    <h2 class="mb-0">
-                                        <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo2" aria-expanded="false" aria-controls="collapseTwo2">
+                        <div class="card mb-2" style="border: 0;">
+                            <div class="card-header cor flex justify-content-center" id="headingOne2" style="border: 0; border-radius: 20px;">
+                                <h2 class="mb-0">
+                                    <button class="btn collapsed font-weight-bold" style="color: #FFF;" type="button" data-toggle="collapse" data-target="#collapseTwo2" aria-expanded="false" aria-controls="collapseTwo2">
                                         Design
                                       </button>
-                                    </h2>
-                                </div>
-                                <div id="collapseTwo2" class="collapse" aria-labelledby="headingTwo2" data-parent="#accordionExample2">
-                                    <div class="card-body">
-                                        <div>
-                                            <input type="checkbox" name="disciplinasOptativas">
-                                            <label> SMD0023 - Design de Jogos Digitais</label>
-                                        </div>
-                                        <div>
-                                            <input type="checkbox" name="disciplinasOptativas">
-                                            <label> SMD0024 - Design Instrucional</label>
-                                        </div>
-                                        <div>
-                                            <input type="checkbox" name="disciplinasOptativas">
-                                            <label> SMD0040 - Experimentos em Multimídia I</label>
-                                        </div>
-                                        <div>
-                                            <input type="checkbox" name="disciplinasOptativas">
-                                            <label> SMD0039 - Cultura de Jogos</label>
-                                        </div>
-                                        <div>
-                                            <input type="checkbox" name="disciplinasOptativas">
-                                            <label> SMD0056 - Direção de Arte para Multimídia</label>
-                                        </div>
-                                        <div>
-                                            <input type="checkbox" name="disciplinasOptativas">
-                                            <label> SMD0057 - Concepção de Cenários e de Personagens</label>
-                                        </div>
-                                        <div>
-                                            <input type="checkbox" name="disciplinasOptativas">
-                                            <label> SMD0059 - Mídias Digitais e Mamtemática</label>
-                                        </div>
-                                        <div>
-                                            <input type="checkbox" name="disciplinasOptativas">
-                                            <label> SMD0084 - Experimentos em Tipografia Digital</label>
-                                        </div>
-                                        <div>
-                                            <input type="checkbox" name="disciplinasOptativas">
-                                            <label> SMD0113 - Laboratório de Criatividade</label>
-                                        </div>
-                                        <div>
-                                            <input type="checkbox" name="disciplinasOptativas">
-                                            <label> SMD0117 - Interação Humano-Computador II</label>
-                                        </div>
-                                        <div>
-                                            <input type="checkbox" name="disciplinasOptativas">
-                                            <label> SMD0118 - Teoria e Crítica do Design</label>
-                                        </div>
-                                        <div>
-                                            <input type="checkbox" name="disciplinasOptativas">
-                                            <label> SMD0119 - Tópicos Avançados em Design de Interfaces Gráficas</label>
-                                        </div>
-                                        <div>
-                                            <input type="checkbox" name="disciplinasOptativas">
-                                            <label> SMD0120 - Identidade Sonora de Marcas</label>
-                                        </div>
-                                        <div>
-                                            <input type="checkbox" name="disciplinasOptativas">
-                                            <label> SMD0127 - Design de Identidade de Marca</label>
-                                        </div>
-                                        <div>
-                                            <input type="checkbox" name="disciplinasOptativas">
-                                            <label> SMD0130 - Design Emocional</label>
-                                        </div>
+                                </h2>
+                            </div>
+                            <div id="collapseTwo2" class="collapse" aria-labelledby="headingTwo2" data-parent="#accordionExample2">
+                                <div class="card-body">
+                                    <div>
+                                        <input type="checkbox" name="disciplinasOptativas">
+                                        <label> SMD0023 - Design de Jogos Digitais</label>
+                                    </div>
+                                    <div>
+                                        <input type="checkbox" name="disciplinasOptativas">
+                                        <label> SMD0024 - Design Instrucional</label>
+                                    </div>
+                                    <div>
+                                        <input type="checkbox" name="disciplinasOptativas">
+                                        <label> SMD0040 - Experimentos em Multimídia I</label>
+                                    </div>
+                                    <div>
+                                        <input type="checkbox" name="disciplinasOptativas">
+                                        <label> SMD0039 - Cultura de Jogos</label>
+                                    </div>
+                                    <div>
+                                        <input type="checkbox" name="disciplinasOptativas">
+                                        <label> SMD0056 - Direção de Arte para Multimídia</label>
+                                    </div>
+                                    <div>
+                                        <input type="checkbox" name="disciplinasOptativas">
+                                        <label> SMD0057 - Concepção de Cenários e de Personagens</label>
+                                    </div>
+                                    <div>
+                                        <input type="checkbox" name="disciplinasOptativas">
+                                        <label> SMD0059 - Mídias Digitais e Mamtemática</label>
+                                    </div>
+                                    <div>
+                                        <input type="checkbox" name="disciplinasOptativas">
+                                        <label> SMD0084 - Experimentos em Tipografia Digital</label>
+                                    </div>
+                                    <div>
+                                        <input type="checkbox" name="disciplinasOptativas">
+                                        <label> SMD0113 - Laboratório de Criatividade</label>
+                                    </div>
+                                    <div>
+                                        <input type="checkbox" name="disciplinasOptativas">
+                                        <label> SMD0117 - Interação Humano-Computador II</label>
+                                    </div>
+                                    <div>
+                                        <input type="checkbox" name="disciplinasOptativas">
+                                        <label> SMD0118 - Teoria e Crítica do Design</label>
+                                    </div>
+                                    <div>
+                                        <input type="checkbox" name="disciplinasOptativas">
+                                        <label> SMD0119 - Tópicos Avançados em Design de Interfaces Gráficas</label>
+                                    </div>
+                                    <div>
+                                        <input type="checkbox" name="disciplinasOptativas">
+                                        <label> SMD0120 - Identidade Sonora de Marcas</label>
+                                    </div>
+                                    <div>
+                                        <input type="checkbox" name="disciplinasOptativas">
+                                        <label> SMD0127 - Design de Identidade de Marca</label>
+                                    </div>
+                                    <div>
+                                        <input type="checkbox" name="disciplinasOptativas">
+                                        <label> SMD0130 - Design Emocional</label>
                                     </div>
                                 </div>
                             </div>
+                        </div>
 
 
 
-                            <div class="card">
-                                <div class="card-header" id="headingThree2">
-                                    <h2 class="mb-0">
-                                        <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseThree2" aria-expanded="false" aria-controls="collapseThree2">
+                        <div class="card mb-2" style="border: 0;">
+                            <div class="card-header cor flex justify-content-center" id="headingOne2" style="border: 0; border-radius: 20px;">
+                                <h2 class="mb-0">
+                                    <button class="btn collapsed font-weight-bold" style="color: #FFF;" type="button" data-toggle="collapse" data-target="#collapseThree2" aria-expanded="false" aria-controls="collapseThree2">
                                         Audiovisual
                                       </button>
-                                    </h2>
-                                </div>
-                                <div id="collapseThree2" class="collapse" aria-labelledby="headingThree2" data-parent="#accordionExample2">
-                                    <div class="card-body">
-                                        <div>
-                                            <input type="checkbox" name="disciplinasOptativas">
-                                            <label> RM0964 - Renderização em Tempo Real</label>
-                                        </div>
-                                        <div>
-                                            <input type="checkbox" name="disciplinasOptativas">
-                                            <label> SMD0016 - Linguagem Audiovisual</label>
-                                        </div>
-                                        <div>
-                                            <input type="checkbox" name="disciplinasOptativas">
-                                            <label> SMD0027 - Edição Audiovisual</label>
-                                        </div>
-                                        <div>
-                                            <input type="checkbox" name="disciplinasOptativas">
-                                            <label> SMD0034 - Ferramentas de Modelagem Tridimensional I</label>
-                                        </div>
-                                        <div>
-                                            <input type="checkbox" name="disciplinasOptativas">
-                                            <label> SMD0131 - Ferramentas de Modelagem Tridimensional II</label>
-                                        </div>
-                                        <div>
-                                            <input type="checkbox" name="disciplinasOptativas">
-                                            <label> SMD0036 - Produção Audiovisual</label>
-                                        </div>
-                                        <div>
-                                            <input type="checkbox" name="disciplinasOptativas">
-                                            <label> SMD0047 - Processamento Digital de Áudio</label>
-                                        </div>
-                                        <div>
-                                            <input type="checkbox" name="disciplinasOptativas">
-                                            <label> SMD0049 - Técnicas de Animação Analógica</label>
-                                        </div>
-                                        <div>
-                                            <input type="checkbox" name="disciplinasOptativas">
-                                            <label> SMD0071 - Videografismo</label>
-                                        </div>
-                                        <div>
-                                            <input type="checkbox" name="disciplinasOptativas">
-                                            <label> SMD0072 - Técnicas de Animação Digital I</label>
-                                        </div>
-                                        <div>
-                                            <input type="checkbox" name="disciplinasOptativas">
-                                            <label> SMD0116 - Tecnodocência e Animação</label>
-                                        </div>
-                                        <div>
-                                            <input type="checkbox" name="disciplinasOptativas">
-                                            <label> SMD0124 - Produção Audiovisual para Crianças e Adolescentes</label>
-                                        </div>
-                                        <div>
-                                            <input type="checkbox" name="disciplinasOptativas">
-                                            <label> SMD0128 - Técnicas de Animação 3D I</label>
-                                        </div>
-                                        <div>
-                                            <input type="checkbox" name="disciplinasOptativas">
-                                            <label> SMD0126 - Técnicas de Animação 3D II</label>
-                                        </div>
-                                        <div>
-                                            <input type="checkbox" name="disciplinasOptativas">
-                                            <label> SMD0129 - Técnicas de Animação 2D</label>
-                                        </div>
+                                </h2>
+                            </div>
+                            <div id="collapseThree2" class="collapse" aria-labelledby="headingThree2" data-parent="#accordionExample2">
+                                <div class="card-body">
+                                    <div>
+                                        <input type="checkbox" name="disciplinasOptativas">
+                                        <label> RM0964 - Renderização em Tempo Real</label>
+                                    </div>
+                                    <div>
+                                        <input type="checkbox" name="disciplinasOptativas">
+                                        <label> SMD0016 - Linguagem Audiovisual</label>
+                                    </div>
+                                    <div>
+                                        <input type="checkbox" name="disciplinasOptativas">
+                                        <label> SMD0027 - Edição Audiovisual</label>
+                                    </div>
+                                    <div>
+                                        <input type="checkbox" name="disciplinasOptativas">
+                                        <label> SMD0034 - Ferramentas de Modelagem Tridimensional I</label>
+                                    </div>
+                                    <div>
+                                        <input type="checkbox" name="disciplinasOptativas">
+                                        <label> SMD0131 - Ferramentas de Modelagem Tridimensional II</label>
+                                    </div>
+                                    <div>
+                                        <input type="checkbox" name="disciplinasOptativas">
+                                        <label> SMD0036 - Produção Audiovisual</label>
+                                    </div>
+                                    <div>
+                                        <input type="checkbox" name="disciplinasOptativas">
+                                        <label> SMD0047 - Processamento Digital de Áudio</label>
+                                    </div>
+                                    <div>
+                                        <input type="checkbox" name="disciplinasOptativas">
+                                        <label> SMD0049 - Técnicas de Animação Analógica</label>
+                                    </div>
+                                    <div>
+                                        <input type="checkbox" name="disciplinasOptativas">
+                                        <label> SMD0071 - Videografismo</label>
+                                    </div>
+                                    <div>
+                                        <input type="checkbox" name="disciplinasOptativas">
+                                        <label> SMD0072 - Técnicas de Animação Digital I</label>
+                                    </div>
+                                    <div>
+                                        <input type="checkbox" name="disciplinasOptativas">
+                                        <label> SMD0116 - Tecnodocência e Animação</label>
+                                    </div>
+                                    <div>
+                                        <input type="checkbox" name="disciplinasOptativas">
+                                        <label> SMD0124 - Produção Audiovisual para Crianças e Adolescentes</label>
+                                    </div>
+                                    <div>
+                                        <input type="checkbox" name="disciplinasOptativas">
+                                        <label> SMD0128 - Técnicas de Animação 3D I</label>
+                                    </div>
+                                    <div>
+                                        <input type="checkbox" name="disciplinasOptativas">
+                                        <label> SMD0126 - Técnicas de Animação 3D II</label>
+                                    </div>
+                                    <div>
+                                        <input type="checkbox" name="disciplinasOptativas">
+                                        <label> SMD0129 - Técnicas de Animação 2D</label>
                                     </div>
                                 </div>
                             </div>
+                        </div>
 
 
 
-                            <div class="card">
-                                <div class="card-header" id="headingFour2">
-                                    <h2 class="mb-0">
-                                        <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseFour2" aria-expanded="false" aria-controls="collapseFour2">
+                        <div class="card" style="border: 0;">
+                            <div class="card-header cor flex justify-content-center" id="headingOne2" style="border: 0; border-radius: 20px;">
+                                <h2 class="mb-0">
+                                    <button class="btn collapsed font-weight-bold" style="color: #FFF;" type="button" data-toggle="collapse" data-target="#collapseFour2" aria-expanded="false" aria-controls="collapseFour2">
                                         Outros
                                       </button>
-                                    </h2>
-                                </div>
-                                <div id="collapseFour2" class="collapse" aria-labelledby="headingFour2" data-parent="#accordionExample2">
-                                    <div class="card-body">
-                                        <div>
-                                            <input type="checkbox" name="disciplinasOptativas">
-                                            <label> ED0115 - Administração Mercadológica I</label>
-                                        </div>
-                                        <div>
-                                            <input type="checkbox" name="disciplinasOptativas">
-                                            <label> HLL0077 - Língua Brasileira de Sinais - LIBRAS</label>
-                                        </div>
-                                        <div>
-                                            <input type="checkbox" name="disciplinasOptativas">
-                                            <label> PRG0002 - Relações Étnico-Raciais e Africanidades</label>
-                                        </div>
-                                        <div>
-                                            <input type="checkbox" name="disciplinasOptativas">
-                                            <label> PRG0003 - Educação Ambiental</label>
-                                        </div>
-                                        <div>
-                                            <input type="checkbox" name="disciplinasOptativas">
-                                            <label> PRG0004 - Educação em Direitos Humanos</label>
-                                        </div>
-                                        <div>
-                                            <input type="checkbox" name="disciplinasOptativas">
-                                            <label> PRG0005 - Diferença e Enfrentamento Profissional nas Desigualdades Sociais</label>
-                                        </div>
-                                        <div>
-                                            <input type="checkbox" name="disciplinasOptativas">
-                                            <label> SMD0006 - Sociedade, Cultura e Tecnologia</label>
-                                        </div>
-                                        <div>
-                                            <input type="checkbox" name="disciplinasOptativas">
-                                            <label> SMD0008 - Educação, Cognição e Tecnologias Digitais</label>
-                                        </div>
-                                        <div>
-                                            <input type="checkbox" name="disciplinasOptativas">
-                                            <label> SMD0013 - Fundamentos de Material Didático para ED à Distância</label>
-                                        </div>
-                                        <div>
-                                            <input type="checkbox" name="disciplinasOptativas">
-                                            <label> SMD0019 - Mitos e Arquétipos</label>
-                                        </div>
-                                        <div>
-                                            <input type="checkbox" name="disciplinasOptativas">
-                                            <label> SMD0020 - Gestão de Negócios em Multimídia</label>
-                                        </div>
-                                        <div>
-                                            <input type="checkbox" name="disciplinasOptativas">
-                                            <label> SMD0031 - Comunicação em Novas Mídias</label>
-                                        </div>
-                                        <div>
-                                            <input type="checkbox" name="disciplinasOptativas">
-                                            <label> SMD0041 - Filosofia da Tecnologia</label>
-                                        </div>
-                                        <div>
-                                            <input type="checkbox" name="disciplinasOptativas">
-                                            <label> SMD0042 - Gerência de Projetos de Software</label>
-                                        </div>
-                                        <div>
-                                            <input type="checkbox" name="disciplinasOptativas">
-                                            <label> SMD0046 - Mitologias Universais</label>
-                                        </div>
-                                        <div>
-                                            <input type="checkbox" name="disciplinasOptativas">
-                                            <label> SMD0051 - Redação para Mídias Digitais</label>
-                                        </div>
-                                        <div>
-                                            <input type="checkbox" name="disciplinasOptativas">
-                                            <label> SMD0075 - Desenvolvimento de Material Didático Experimental e Treinamento de Habilidades</label>
-                                        </div>
-                                        <div>
-                                            <input type="checkbox" name="disciplinasOptativas">
-                                            <label> SMD0076 - Cibercultura e Educação: Novas Práticas</label>
-                                        </div>
-                                        <div>
-                                            <input type="checkbox" name="disciplinasOptativas">
-                                            <label> SMD0083 - Educomunicação</label>
-                                        </div>
-                                        <div>
-                                            <input type="checkbox" name="disciplinasOptativas">
-                                            <label> SMD0087 - Filosofia da Tecnologia</label>
-                                        </div>
-                                        <div>
-                                            <input type="checkbox" name="disciplinasOptativas">
-                                            <label> SMD0112 - Instalações Multimídia</label>
-                                        </div>
-                                        <div>
-                                            <input type="checkbox" name="disciplinasOptativas">
-                                            <label> SMD0115 - Métodos e Técnicas na Pesquisa Transdisciplinar</label>
-                                        </div>
-                                        <div>
-                                            <input type="checkbox" name="disciplinasOptativas">
-                                            <label> SMD0125 - Projetos para Educação On-line</label>
-                                        </div>
-                                        <div>
-                                            <input type="checkbox" name="disciplinasOptativas">
-                                            <label> SMD0132 - Introdução à Tutoria para Educação On-line</label>
-                                        </div>
+                                </h2>
+                            </div>
+                            <div id="collapseFour2" class="collapse" aria-labelledby="headingFour2" data-parent="#accordionExample2">
+                                <div class="card-body">
+                                    <div>
+                                        <input type="checkbox" name="disciplinasOptativas">
+                                        <label> ED0115 - Administração Mercadológica I</label>
+                                    </div>
+                                    <div>
+                                        <input type="checkbox" name="disciplinasOptativas">
+                                        <label> HLL0077 - Língua Brasileira de Sinais - LIBRAS</label>
+                                    </div>
+                                    <div>
+                                        <input type="checkbox" name="disciplinasOptativas">
+                                        <label> PRG0002 - Relações Étnico-Raciais e Africanidades</label>
+                                    </div>
+                                    <div>
+                                        <input type="checkbox" name="disciplinasOptativas">
+                                        <label> PRG0003 - Educação Ambiental</label>
+                                    </div>
+                                    <div>
+                                        <input type="checkbox" name="disciplinasOptativas">
+                                        <label> PRG0004 - Educação em Direitos Humanos</label>
+                                    </div>
+                                    <div>
+                                        <input type="checkbox" name="disciplinasOptativas">
+                                        <label> PRG0005 - Diferença e Enfrentamento Profissional nas Desigualdades Sociais</label>
+                                    </div>
+                                    <div>
+                                        <input type="checkbox" name="disciplinasOptativas">
+                                        <label> SMD0006 - Sociedade, Cultura e Tecnologia</label>
+                                    </div>
+                                    <div>
+                                        <input type="checkbox" name="disciplinasOptativas">
+                                        <label> SMD0008 - Educação, Cognição e Tecnologias Digitais</label>
+                                    </div>
+                                    <div>
+                                        <input type="checkbox" name="disciplinasOptativas">
+                                        <label> SMD0013 - Fundamentos de Material Didático para ED à Distância</label>
+                                    </div>
+                                    <div>
+                                        <input type="checkbox" name="disciplinasOptativas">
+                                        <label> SMD0019 - Mitos e Arquétipos</label>
+                                    </div>
+                                    <div>
+                                        <input type="checkbox" name="disciplinasOptativas">
+                                        <label> SMD0020 - Gestão de Negócios em Multimídia</label>
+                                    </div>
+                                    <div>
+                                        <input type="checkbox" name="disciplinasOptativas">
+                                        <label> SMD0031 - Comunicação em Novas Mídias</label>
+                                    </div>
+                                    <div>
+                                        <input type="checkbox" name="disciplinasOptativas">
+                                        <label> SMD0041 - Filosofia da Tecnologia</label>
+                                    </div>
+                                    <div>
+                                        <input type="checkbox" name="disciplinasOptativas">
+                                        <label> SMD0042 - Gerência de Projetos de Software</label>
+                                    </div>
+                                    <div>
+                                        <input type="checkbox" name="disciplinasOptativas">
+                                        <label> SMD0046 - Mitologias Universais</label>
+                                    </div>
+                                    <div>
+                                        <input type="checkbox" name="disciplinasOptativas">
+                                        <label> SMD0051 - Redação para Mídias Digitais</label>
+                                    </div>
+                                    <div>
+                                        <input type="checkbox" name="disciplinasOptativas">
+                                        <label> SMD0075 - Desenvolvimento de Material Didático Experimental e Treinamento de Habilidades</label>
+                                    </div>
+                                    <div>
+                                        <input type="checkbox" name="disciplinasOptativas">
+                                        <label> SMD0076 - Cibercultura e Educação: Novas Práticas</label>
+                                    </div>
+                                    <div>
+                                        <input type="checkbox" name="disciplinasOptativas">
+                                        <label> SMD0083 - Educomunicação</label>
+                                    </div>
+                                    <div>
+                                        <input type="checkbox" name="disciplinasOptativas">
+                                        <label> SMD0087 - Filosofia da Tecnologia</label>
+                                    </div>
+                                    <div>
+                                        <input type="checkbox" name="disciplinasOptativas">
+                                        <label> SMD0112 - Instalações Multimídia</label>
+                                    </div>
+                                    <div>
+                                        <input type="checkbox" name="disciplinasOptativas">
+                                        <label> SMD0115 - Métodos e Técnicas na Pesquisa Transdisciplinar</label>
+                                    </div>
+                                    <div>
+                                        <input type="checkbox" name="disciplinasOptativas">
+                                        <label> SMD0125 - Projetos para Educação On-line</label>
+                                    </div>
+                                    <div>
+                                        <input type="checkbox" name="disciplinasOptativas">
+                                        <label> SMD0132 - Introdução à Tutoria para Educação On-line</label>
                                     </div>
                                 </div>
                             </div>
-
                         </div>
+
+                    </div>
                     </form><br>
 
-                    <a type="button" class="btn btn-primary" id="btnProgresso" value="Checar progresso">Cheque seu progresso</a>
+                    <a type="button" style="margin-bottom: 20px;" class="btn btn-primary" id="btnProgresso" value="Checar progresso">Cheque seu progresso</a>
+                </div>
+            </div>
+
+            <!-- Begin Page Content -->
+            <div class="container-fluid" id="relatorio" style="display: none;">
+
+                <!-- Page Heading -->
+                <div class="d-sm-flex align-items-center justify-content-between mb-4">
+                    <h1 class="h3 mb-0 text-gray-800">Seu Progresso</h1>
+                    <h1 class="h6 mb-0 text-gray-800">Como essa é uma área focada nas disciplinas, já somamos as atividades complementares.</h1>
+                    <a href="#" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i
+                                class="fas fa-download fa-sm text-white-50"></i> Baixar relatório</a>
                 </div>
 
-                <!-- Begin Page Content -->
-                <div class="container-fluid" id="relatorio" style="display: none;">
+                <!-- Content Row -->
+                <div class="row">
 
-                    <!-- Page Heading -->
-                    <div class="d-sm-flex align-items-center justify-content-between mb-4">
-                        <h1 class="h3 mb-0 text-gray-800">Seu Progresso</h1>
-                        <h1 class="h6 mb-0 text-gray-800">Como essa é uma área focada nas disciplinas, já somamos as atividades complementares.</h1>
-                        <a href="#" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i
-                                class="fas fa-download fa-sm text-white-50"></i> Baixar relatório</a>
-                    </div>
-
-                    <!-- Content Row -->
-                    <div class="row">
-
-                        <!-- Earnings (Monthly) Card Example -->
-                        <div class="col-xl-3 col-md-6 mb-4">
-                            <div class="card border-left-primary shadow h-100 py-2">
-                                <div class="card-body">
-                                    <div class="row no-gutters align-items-center">
-                                        <div class="col mr-2">
-                                            <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">
-                                                Horas totais do curso</div>
-                                            <div class="h5 mb-0 font-weight-bold text-gray-800">2880 horas</div>
-                                        </div>
-                                        <div class="col-auto">
-                                            <i class="fas fa-hourglass fa-2x text-gray-300"></i>
-                                        </div>
+                    <!-- Earnings (Monthly) Card Example -->
+                    <div class="col-xl-3 col-md-6 mb-4">
+                        <div class="card border-left-primary shadow h-100 py-2">
+                            <div class="card-body">
+                                <div class="row no-gutters align-items-center">
+                                    <div class="col mr-2">
+                                        <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">
+                                            Horas totais do curso</div>
+                                        <div class="h5 mb-0 font-weight-bold text-gray-800">2880 horas</div>
                                     </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Earnings (Monthly) Card Example -->
-                        <div class="col-xl-3 col-md-6 mb-4">
-                            <div class="card border-left-success shadow h-100 py-2">
-                                <div class="card-body">
-                                    <div class="row no-gutters align-items-center">
-                                        <div class="col mr-2">
-                                            <div class="text-xs font-weight-bold text-success text-uppercase mb-1">
-                                                Horas feitas</div>
-                                            <div class="h5 mb-0 font-weight-bold text-gray-800" id="horasFeitas"></div>
-                                        </div>
-                                        <div class="col-auto">
-                                            <i class="fas fa-hourglass-half fa-2x text-gray-300"></i>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Earnings (Monthly) Card Example -->
-                        <div class="col-xl-3 col-md-6 mb-4">
-                            <div class="card border-left-info shadow h-100 py-2">
-                                <div class="card-body">
-                                    <div class="row no-gutters align-items-center">
-                                        <div class="col mr-2">
-                                            <div class="text-xs font-weight-bold text-info text-uppercase mb-1">Progresso
-                                            </div>
-                                            <div class="row no-gutters align-items-center">
-                                                <div class="col-auto">
-                                                    <div class="h5 mb-0 mr-3 font-weight-bold text-gray-800" id="porcProgresso"></div>
-                                                </div>
-                                                <div class="col">
-                                                    <div class="progress progress-sm mr-2">
-                                                        <div class="progress-bar bg-info" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" id="porcBarra"></div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-auto">
-                                            <i class="fas fa-spinner fa-2x text-gray-300"></i>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Pending Requests Card Example -->
-                        <div class="col-xl-3 col-md-6 mb-4">
-                            <div class="card border-left-warning shadow h-100 py-2">
-                                <div class="card-body">
-                                    <div class="row no-gutters align-items-center">
-                                        <div class="col mr-2">
-                                            <div class="text-xs font-weight-bold text-warning text-uppercase mb-1">
-                                                Disciplinas restantes</div>
-                                            <div class="h5 mb-0 font-weight-bold text-gray-800" id="discProgresso"></div>
-                                        </div>
-                                        <div class="col-auto">
-                                            <i class="fas fa-clipboard-list fa-2x text-gray-300"></i>
-                                        </div>
+                                    <div class="col-auto">
+                                        <i class="fas fa-hourglass fa-2x text-gray-300"></i>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
 
-                    <!-- Content Row -->
-
-                    <div class="row">
-
-                        <!-- Area Chart -->
-                        <div class="col-xl-8 col-lg-7">
-                            <div class="card shadow mb-4">
-                                <!-- Card Header - Dropdown -->
-                                <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
-                                    <h6 class="m-0 font-weight-bold text-primary">Disciplinas por semestre</h6>
-                                    <div class="dropdown no-arrow">
-                                        <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                            <i class="fas fa-ellipsis-v fa-sm fa-fw text-gray-400"></i>
-                                        </a>
-                                        <div class="dropdown-menu dropdown-menu-right shadow animated--fade-in" aria-labelledby="dropdownMenuLink">
-                                            <div class="dropdown-header">Dropdown Header:</div>
-                                            <a class="dropdown-item" href="#">Action</a>
-                                            <a class="dropdown-item" href="#">Another action</a>
-                                            <div class="dropdown-divider"></div>
-                                            <a class="dropdown-item" href="#">Something else here</a>
-                                        </div>
+                    <!-- Earnings (Monthly) Card Example -->
+                    <div class="col-xl-3 col-md-6 mb-4">
+                        <div class="card border-left-success shadow h-100 py-2">
+                            <div class="card-body">
+                                <div class="row no-gutters align-items-center">
+                                    <div class="col mr-2">
+                                        <div class="text-xs font-weight-bold text-success text-uppercase mb-1">
+                                            Horas feitas</div>
+                                        <div class="h5 mb-0 font-weight-bold text-gray-800" id="horasFeitas"></div>
                                     </div>
-                                </div>
-                                <!-- Card Body -->
-                                <div class="card-body">
-                                    <div class="chart-area">
-                                        <canvas id="myAreaChart"></canvas>
+                                    <div class="col-auto">
+                                        <i class="fas fa-hourglass-half fa-2x text-gray-300"></i>
                                     </div>
                                 </div>
                             </div>
                         </div>
+                    </div>
 
-                        <!-- Pie Chart -->
-                        <div class="col-xl-4 col-lg-5">
-                            <div class="card shadow mb-4">
-                                <!-- Card Header - Dropdown -->
-                                <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
-                                    <h6 class="m-0 font-weight-bold text-primary">Revenue Sources</h6>
-                                    <div class="dropdown no-arrow">
-                                        <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                            <i class="fas fa-ellipsis-v fa-sm fa-fw text-gray-400"></i>
-                                        </a>
-                                        <div class="dropdown-menu dropdown-menu-right shadow animated--fade-in" aria-labelledby="dropdownMenuLink">
-                                            <div class="dropdown-header">Dropdown Header:</div>
-                                            <a class="dropdown-item" href="#">Action</a>
-                                            <a class="dropdown-item" href="#">Another action</a>
-                                            <div class="dropdown-divider"></div>
-                                            <a class="dropdown-item" href="#">Something else here</a>
+                    <!-- Earnings (Monthly) Card Example -->
+                    <div class="col-xl-3 col-md-6 mb-4">
+                        <div class="card border-left-info shadow h-100 py-2">
+                            <div class="card-body">
+                                <div class="row no-gutters align-items-center">
+                                    <div class="col mr-2">
+                                        <div class="text-xs font-weight-bold text-info text-uppercase mb-1">Progresso
+                                        </div>
+                                        <div class="row no-gutters align-items-center">
+                                            <div class="col-auto">
+                                                <div class="h5 mb-0 mr-3 font-weight-bold text-gray-800" id="porcProgresso"></div>
+                                            </div>
+                                            <div class="col">
+                                                <div class="progress progress-sm mr-2">
+                                                    <div class="progress-bar bg-info" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" id="porcBarra"></div>
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
-                                </div>
-                                <!-- Card Body -->
-                                <div class="card-body">
-                                    <div class="chart-pie pt-4 pb-2">
-                                        <canvas id="myPieChart"></canvas>
+                                    <div class="col-auto">
+                                        <i class="fas fa-spinner fa-2x text-gray-300"></i>
                                     </div>
-                                    <div class="mt-4 text-center small">
-                                        <span class="mr-2">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Pending Requests Card Example -->
+                    <div class="col-xl-3 col-md-6 mb-4">
+                        <div class="card border-left-warning shadow h-100 py-2">
+                            <div class="card-body">
+                                <div class="row no-gutters align-items-center">
+                                    <div class="col mr-2">
+                                        <div class="text-xs font-weight-bold text-warning text-uppercase mb-1">
+                                            Disciplinas restantes</div>
+                                        <div class="h5 mb-0 font-weight-bold text-gray-800" id="discProgresso"></div>
+                                    </div>
+                                    <div class="col-auto">
+                                        <i class="fas fa-clipboard-list fa-2x text-gray-300"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Content Row -->
+
+                <div class="row">
+
+                    <!-- Area Chart -->
+                    <div class="col-xl-8 col-lg-7">
+                        <div class="card shadow mb-4">
+                            <!-- Card Header - Dropdown -->
+                            <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+                                <h6 class="m-0 font-weight-bold text-primary">Disciplinas por semestre</h6>
+                                <div class="dropdown no-arrow">
+                                    <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        <i class="fas fa-ellipsis-v fa-sm fa-fw text-gray-400"></i>
+                                    </a>
+                                    <div class="dropdown-menu dropdown-menu-right shadow animated--fade-in" aria-labelledby="dropdownMenuLink">
+                                        <div class="dropdown-header">Dropdown Header:</div>
+                                        <a class="dropdown-item" href="#">Action</a>
+                                        <a class="dropdown-item" href="#">Another action</a>
+                                        <div class="dropdown-divider"></div>
+                                        <a class="dropdown-item" href="#">Something else here</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Card Body -->
+                            <div class="card-body">
+                                <div class="chart-area">
+                                    <canvas id="myAreaChart"></canvas>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Pie Chart -->
+                    <div class="col-xl-4 col-lg-5">
+                        <div class="card shadow mb-4">
+                            <!-- Card Header - Dropdown -->
+                            <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+                                <h6 class="m-0 font-weight-bold text-primary">Revenue Sources</h6>
+                                <div class="dropdown no-arrow">
+                                    <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        <i class="fas fa-ellipsis-v fa-sm fa-fw text-gray-400"></i>
+                                    </a>
+                                    <div class="dropdown-menu dropdown-menu-right shadow animated--fade-in" aria-labelledby="dropdownMenuLink">
+                                        <div class="dropdown-header">Dropdown Header:</div>
+                                        <a class="dropdown-item" href="#">Action</a>
+                                        <a class="dropdown-item" href="#">Another action</a>
+                                        <div class="dropdown-divider"></div>
+                                        <a class="dropdown-item" href="#">Something else here</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Card Body -->
+                            <div class="card-body">
+                                <div class="chart-pie pt-4 pb-2">
+                                    <canvas id="myPieChart"></canvas>
+                                </div>
+                                <div class="mt-4 text-center small">
+                                    <span class="mr-2">
                                             <i class="fas fa-circle text-primary"></i> Direct
                                         </span>
-                                        <span class="mr-2">
+                                    <span class="mr-2">
                                             <i class="fas fa-circle text-success"></i> Social
                                         </span>
-                                        <span class="mr-2">
+                                    <span class="mr-2">
                                             <i class="fas fa-circle text-info"></i> Referral
                                         </span>
-                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -948,6 +950,7 @@
                 </div>
             </div>
         </div>
+    </div>
 
     </div>
 

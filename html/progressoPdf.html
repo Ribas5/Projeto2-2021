@@ -19,7 +19,7 @@
 
 </head>
 
-<body id="page-top" class="inicial" onload="progressoPDF()">
+<body id="page-top" class="progresso" onload="progressoPDF()">
 
     <!-- Page Wrapper -->
     <div id="wrapper">
@@ -87,7 +87,7 @@
                     <div class="row">
 
                         <!-- Area Chart -->
-                        <div class="col-xl-12 col-md-6 mb-4">
+                        <div class="col-xl-12 col-md-6 mb-2">
                             <div class="painel mb-4">
                                 <!-- Card Header - Dropdown -->
                                 <div class="painel-header py-3 d-flex flex-row align-items-center justify-content-between">
@@ -106,7 +106,7 @@
                     <div class="row align-items-center">
                         <!-- Pie Chart -->
                         <div class="col-xl-6 col-lg-5">
-                            <div class="painel mb-4">
+                            <div class="painel mb-2">
                                 <!-- Card Header - Dropdown -->
                                 <div class="painel-header py-3 d-flex flex-row align-items-center justify-content-between">
                                     <h2 class="m-0">Horas do curso</h6>
@@ -121,7 +121,7 @@
                                             <div class="card-body">
                                                 <div class="row no-gutters align-items-center">
                                                     <div class="col-auto margin-icone">
-                                                        <i class="fas fa-hourglass-half fa-2x text-laranja"></i>
+                                                        <img src="./../img/icon/icone-horasConcluidas.svg" alt="" style="width: 48px;">
                                                     </div>
                                                     <div class="col mr-2">
                                                         <div class="mb-1">
@@ -138,7 +138,7 @@
                                             <div class="card-body">
                                                 <div class="row no-gutters align-items-center">
                                                     <div class="col-auto margin-icone">
-                                                        <i class="fas fa-hourglass-half fa-2x text-amarelo"></i>
+                                                        <img src="./../img/icon/icone-horasRestantes.svg" alt="" style="width: 48px;">
                                                     </div>
                                                     <div class="col mr-2">
                                                         <div class="mb-1">
@@ -155,7 +155,7 @@
                                             <div class="card-body">
                                                 <div class="row no-gutters align-items-center">
                                                     <div class="col-auto margin-icone">
-                                                        <i class="fas fa-hourglass-half fa-2x text-azul"></i>
+                                                        <img src="./../img/icon/icone-horasTotais.svg" alt="" style="width: 48px;">
                                                     </div>
                                                     <div class="col mr-2">
                                                         <div class="mb-1">
@@ -186,11 +186,11 @@
                                     <div class="card-body">
                                         <div class="row no-gutters align-items-center">
                                             <div class="col-auto margin-icone">
-                                                <i class="fas fa-hourglass-half fa-2x text-azul"></i>
+                                                <img src="./../img/icon/icone-dashConcluida.svg" alt="">
                                             </div>
-                                            <div class="flex align-items-center">
-                                                <div class="h3 mb-0 text-azul mx-2" id="discConluidas"></div>
-                                                <div class="h6 mb-0">Disciplinas concluídas</div>
+                                            <div class="flex align-items-center ">
+                                                <div class="h3 mb-0 text-azul mx-2 " id="discConluidas"></div>
+                                                <div class="h6 mb-0 ">Disciplinas concluídas</div>
                                             </div>
 
 
@@ -200,14 +200,14 @@
                             </div>
 
                             <!-- Earnings (Monthly) Card Example -->
-                            <div class="col-xl-12 col-md-6 mb-4">
-                                <div class="painel painel-border-left-laranja py-2">
-                                    <div class="card-body">
-                                        <div class="row no-gutters align-items-center">
-                                            <div class="col-auto margin-icone">
-                                                <i class="fas fa-hourglass-half fa-2x text-laranja"></i>
+                            <div class="col-xl-12 col-md-6 mb-4 ">
+                                <div class="painel painel-border-left-laranja py-2 ">
+                                    <div class="card-body ">
+                                        <div class="row no-gutters align-items-center ">
+                                            <div class="col-auto margin-icone ">
+                                                <img src="./../img/icon/icone-dashRestante.svg" alt="" style="width: 48px;">
                                             </div>
-                                            <div class="flex align-items-center">
+                                            <div class="flex align-items-center ">
                                                 <div class="h3 mb-0 text-laranja mx-2" id="discRestantes"></div>
                                                 <div class="h6 mb-0">Disciplinas restantes</div>
                                             </div>
@@ -221,17 +221,17 @@
                             <!-- Earnings (Monthly) Card Example -->
                             <div class="col-xl-12 col-md-6 mb-4">
                                 <div class="painel painel-border-left-amarelo py-2">
-                                    <div class="card-body">
+                                    <div class="card-body ">
                                         <div class="row no-gutters align-items-center">
-                                            <div class="col-auto margin-icone">
-                                                <i class="fas fa-spinner fa-2x text-amarelo"></i>
+                                            <div class="col-auto margin-icone ">
+                                                <img src="./../img/icon/icone-dashProgresso.svg " alt="" style="width: 48px;">
                                             </div>
-                                            <div class="col mr-2">
+                                            <div class="col mr-2 ">
                                                 <div class="row no-gutters align-items-center">
-                                                    <div class="col-auto">
+                                                    <div class="col-auto ">
                                                         <div class="h3 mb-0 mr-3 text-amarelo" id="porcProgresso"></div>
                                                     </div>
-                                                    <div class="col">
+                                                    <div class="col ">
                                                         <div class="progress progress-sm mr-2">
                                                             <div class="progress-bar background-amarelo" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" id="porcBarra"></div>
                                                         </div>

@@ -13,17 +13,17 @@ body.inicial {
 }
 
 body.escolha {
-    background-image: url('./../img/');
+    background-image: url('./../img/background-escolha.svg');
     background-size: cover;
 }
 
 body.formProgreso {
-    background-image: url('./../img/');
+    background-image: url('./../img/background-form.svg');
     background-size: cover;
 }
 
 .progresso {
-    background-image: url('./../img/');
+    background-image: url('./../img/background-dashboard.svg');
     background-size: cover;
 }
 
@@ -153,4 +153,57 @@ df-messenger {
 
 .margin-icone {
     margin-right: 1.25rem;
+}
+
+.cor {
+    background-color: #4C71AE;
+}
+
+.flex-formulario {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.botao-formulario {
+    display: inline-block;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #FFF;
+    text-align: center;
+    text-decoration: none;
+    vertical-align: middle;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+    background-color: transparent;
+    border: 2px solid #FFF;
+    padding: 0.375rem 0.75rem;
+    font-size: 1rem;
+    border-radius: 20px;
+    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+.btn-check {
+    position: absolute;
+    clip: rect(0, 0, 0, 0);
+    pointer-events: none;
+}
+
+.btn-check[disabled]+.botao-formulario,
+.btn-check:disabled+.botao-formulario {
+    pointer-events: none;
+    filter: none;
+    opacity: 0.65;
+}
+
+.btn-check:checked+.botao-formulario-cor,
+.btn-check:active+.botao-formulario-cor,
+.botao-formulario-cor:active,
+.botao-formulario-cor.active,
+.botao-formulario-cor.dropdown-toggle.show {
+    color: #000;
+    background-color: #FFF;
+    border: 2px solid #FFF;
 }
