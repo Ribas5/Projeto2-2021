@@ -6,7 +6,9 @@
 body {
     color: #FFF;
 }
-
+.sombra-card{
+   box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+}
 body.inicial {
     background-image: url('./../img/background-inicial.svg');
     background-size: cover;
