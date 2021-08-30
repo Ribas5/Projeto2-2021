@@ -22,6 +22,11 @@ body.formProgreso {
     background-size: cover;
 }
 
+body.trilhas {
+    background-image: url('./../img/background-construcao.svg');
+    background-size: cover;
+}
+
 .progresso {
     background-image: url('./../img/background-dashboard.svg');
     background-size: cover;
@@ -61,18 +66,20 @@ df-messenger {
 
 .botao-escolha {
     display: flex;
-    flex-direction: column;
-    width: 350px;
-    height: 350px;
+    align-items: center;
+    justify-content: center;
+    width: 500px;
+    height: max-content;
     text-align: center;
     -webkit-user-select: none;
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
-    padding: 30px;
+    padding: 20px;
     font-size: 32px;
     line-height: 1.5;
-    border-radius: 0.35rem;
+    border: 2px solid #FFF;
+    border-radius: 0.25rem;
 }
 
 .botao-escolha:hover {
@@ -83,7 +90,7 @@ df-messenger {
 
 .cor-botao-escolha {
     color: #FFF;
-    background-color: #25273E;
+    background-color: transparent;
     border-radius: 20px;
 }
 
@@ -162,7 +169,33 @@ df-messenger {
 .flex-formulario {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
+    justify-content: center;
+}
+
+.padding-botao {
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+.botao {
+    display: inline-block;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #FFF;
+    text-align: center;
+    text-decoration: none;
+    background-color: transparent;
+    border: 2px solid #FFF;
+    padding: 0.375rem 0.75rem;
+    font-size: 1rem;
+    border-radius: 20px;
+}
+
+.botao:hover {
+    text-decoration: none;
+    color: #FFF;
+    background-color: #5D91DE;
+    border: 2px solid #5D91DE;
 }
 
 .botao-formulario {
@@ -205,5 +238,11 @@ df-messenger {
 .botao-formulario-cor.dropdown-toggle.show {
     color: #000;
     background-color: #FFF;
+    border: 2px solid #FFF;
+}
+
+table,
+th,
+td {
     border: 2px solid #FFF;
 }
