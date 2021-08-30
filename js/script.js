@@ -71,7 +71,8 @@ document.getElementById("btnProgresso").addEventListener('click', function() {
     var discAprovadas = 0
     var controle = 'semestre0'
 
-    for (let i = 1; i < 9; i++) {
+    // Recupera a quantidade de disciplinas aprovadas até o 4o semestre
+    for (let i = 1; i < 5; i++) {
         var str = controle.replace(controle[8], i)
         if (document.querySelectorAll('#' + str + ' .btn-check:checked').length == 0) {
             break
@@ -79,7 +80,35 @@ document.getElementById("btnProgresso").addEventListener('click', function() {
         discPorSemestreAtual.push(document.querySelectorAll('#' + str + ' .btn-check:checked').length)
         discAprovadas += document.querySelectorAll('#' + str + ' .btn-check:checked').length
     }
+    console.log('discPorSemestreAtual', discPorSemestreAtual);
+
+    // Recupera a quantidade de todas as disciplinas aprovadas
+    let frmCheck = document.getElementById("formSelect").elements;
+    let contDiscp = 0;
+    for (i = 0; i < frmCheck.length; i++) {
+        if (frmCheck[i].checked) {
+            contDiscp++;
+        }
+    }
+
+    // Disciplinas 'optativas'
+    var discOptativas = contDiscp - discAprovadas
+    console.log('discOptativas', discOptativas);
+    var v = parseInt(discOptativas / 5)
+    console.log('v', v);
+    if (v > 1 && discOptativas % 5 == 0) {
+        var controle = 0
+    } else {
+        if (discOptativas % 5 == 0) {
+            discPorSemestreAtual.push(5)
+        } else {
+            discPorSemestreAtual.push(5)
+            discPorSemestreAtual.push(discOptativas % 5)
+        }
+    }
+
     sessionStorage.setItem("discPorSemestreAtual", discPorSemestreAtual)
+    console.log(("discPorSemestre", discPorSemestreAtual));
 
     var discRestantes = 41 - discAprovadas
     var discPorSemestre = discPorSemestreAtual
@@ -88,20 +117,23 @@ document.getElementById("btnProgresso").addEventListener('click', function() {
     var semestresRestante = 0
     if (discPorSemestre.length < 8) {
         semestresRestante = 8 - discPorSemestre.length
+        console.log('semestresRestante', semestresRestante);
 
         // Disciplinas que precisam ser feitas por semestre para se formar no tempo
-        var discPorSemestreRestante = parseInt(discRestantes / semestresRestante)
+        var discPorSemestreRestante = discRestantes / semestresRestante
+        console.log('discPorSemestreRestante', discPorSemestreRestante);
 
         // Adicionando na lista
         for (let i = 0; i < semestresRestante; i++) {
             discPorSemestre.push(discPorSemestreRestante)
         }
+        console.log('discPorSemestre', discPorSemestre);
     }
 
     sessionStorage.setItem("discPorSemestre", discPorSemestre)
 
     var prog = parseInt(((discAprovadas * 64 + 64 + 192) / 2880) * 100);
-    document.getElementById("content").style.display = "none";
+    document.getElementById("formulario").style.display = "none";
     document.getElementById("relatorio").style.display = "block";
 
     document.getElementById("discConluidas").innerHTML = discAprovadas;
@@ -141,7 +173,7 @@ document.getElementById("btnProgresso").addEventListener('click', function() {
 
 function progressoPDF() {
     // Convertendo o JSON para objeto
-    let json = '{ "discAprovadas": 10, "discPorSemestre": [5, 5, 6, 4, 4] }'
+    let json = '{ "discAprovadas": 24, "discPorSemestre": [5, 5, 6, 4, 4] }'
     let dados = JSON.parse(json)
 
     sessionStorage.setItem("discPorSemestreAtual", dados.discPorSemestre)
@@ -172,20 +204,4 @@ function progressoPDF() {
     document.getElementById("porcBarra").style.width = prog + "%";
 
     document.getElementById("discRestantes").innerHTML = discRestantes;
-}
-
-function criaPDF() {
-    var conteudo = document.getElementById('relatorio').innerHTML
-    var win = window.open(', ', 'height: 700px,width: 700px')
-    var style = '<link href="./../css/sb-admin-2.css" rel="stylesheet"><link rel="stylesheet" href="./../css/style.css">'
-
-    win.document.write('<html><head>')
-    win.document.write(style)
-        .document.write('</head><body>')
-    win.document.write(conteudo)
-    win.document.write('</body></html>')
-
-    win.document.close()
-
-    win.print()
 }
