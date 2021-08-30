@@ -63,7 +63,6 @@ df-messenger {
 .menu-fixo{
     position: fixed;
     height: 100%;
-    padding-right: ;
 }
 
 .cor-butao {
@@ -171,7 +170,7 @@ df-messenger {
 }
 
 .cor {
-    background-color: #4C71AE;
+    background-color: #5D77D4;
 }
 
 .flex-formulario {
