@@ -57,6 +57,14 @@ df-messenger {
 .margem {
     margin: 20px;
 }
+.margem-relatorio{
+    margin-left: 100px;
+}
+.menu-fixo{
+    position: fixed;
+    height: 100%;
+    padding-right: ;
+}
 
 .cor-butao {
     color: inherit;
