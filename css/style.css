@@ -57,10 +57,12 @@ df-messenger {
 .margem {
     margin: 20px;
 }
-.margem-relatorio{
-    margin-left: 100px;
+
+.margem-relatorio {
+    margin-left: 130px;
 }
-.menu-fixo{
+
+.menu-fixo {
     position: fixed;
     height: 100%;
 }
