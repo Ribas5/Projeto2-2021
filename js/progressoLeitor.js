@@ -114,7 +114,7 @@ var myLineChart = new Chart(ctx, {
             yAxes: [{
                 ticks: {
                     min: 0,
-                    max: 6,
+                    max: 7,
                     padding: 10,
                     fontColor: "rgba(255,255,255,1)",
                     // Include a dollar sign in the ticks
@@ -132,7 +132,7 @@ var myLineChart = new Chart(ctx, {
             }],
         },
         legend: {
-            display: true
+            display: false
         },
         tooltips: {
             backgroundColor: "rgb(255,255,255)",

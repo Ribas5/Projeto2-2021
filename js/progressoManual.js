@@ -203,7 +203,7 @@ document.getElementById("btnProgresso").addEventListener('click', function() {
                 yAxes: [{
                     ticks: {
                         min: 0,
-                        max: 6,
+                        max: 7,
                         padding: 10,
                         fontColor: "rgba(255,255,255,1)",
                         // Include a dollar sign in the ticks
