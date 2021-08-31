@@ -6,9 +6,7 @@
 body {
     color: #FFF;
 }
-.sombra-card{
-   box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
-}
+
 body.inicial {
     background-image: url('./../img/background-inicial.svg');
     background-size: cover;
@@ -50,6 +48,21 @@ df-messenger {
     --df-messenger-input-placeholder-font-color: #FFFFFF99;
     --df-messenger-input-font-color: #ffffff;
     scrollbar-color: #836EBC80;
+}
+
+table {
+    border-collapse: inherit;
+}
+
+th,
+td {
+    border: 2px solid #559af5b9;
+    padding: 0.5rem;
+}
+
+a:hover {
+    color: #d1a927;
+    text-decoration-color: #F6D467;
 }
 
 .flex {
@@ -175,6 +188,7 @@ df-messenger {
 
 .cor {
     background-color: #5D77D4;
+    padding: 0;
 }
 
 .flex-formulario {
@@ -186,6 +200,10 @@ df-messenger {
 .padding-botao {
     padding-left: 5px;
     padding-right: 5px;
+}
+
+.sombra-card {
+    box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
 }
 
 .botao {
@@ -249,11 +267,5 @@ df-messenger {
 .botao-formulario-cor.dropdown-toggle.show {
     color: #000;
     background-color: #FFF;
-    border: 2px solid #FFF;
-}
-
-table,
-th,
-td {
     border: 2px solid #FFF;
 }
